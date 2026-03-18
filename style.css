@@ -1164,39 +1164,58 @@ footer {
   .ki-card:last-child { border-bottom: none; }
 }
 
-
 /* ══════════════════════════════════════════
-   REVIEWS — minimalist list with circle avatars
+   REVIEWS — 4-column horizontal
 ══════════════════════════════════════════ */
-.rv-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  margin-top: 2.5rem;
+.rv-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
+  margin-top: 2.5rem;
 }
-.rv-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-  padding: 1.75rem 2rem;
+.rv-col {
   background: var(--white);
-  border-bottom: 1px solid var(--border);
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
   transition: background 0.2s;
 }
-.rv-row:last-child { border-bottom: none; }
-.rv-row:hover { background: var(--bg-warm); }
+.rv-col:hover { background: var(--bg-warm); }
 
-.rv-avatar-wrap {
+.rv-stars {
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  color: var(--ink-30);
   flex-shrink: 0;
-  width: 52px;
-  height: 52px;
+}
+.rv-quote {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--ink-70);
+  line-height: 1.75;
+  flex: 1;
+}
+.rv-attribution {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.rv-avatar-wrap {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   overflow: hidden;
   border: 1.5px solid var(--border);
-  position: relative;
+  flex-shrink: 0;
   background: var(--bg-grey);
 }
 .rv-avatar {
@@ -1213,54 +1232,41 @@ footer {
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   font-weight: 700;
   color: var(--ink-50);
   background: var(--bg-grey);
 }
-
-.rv-content {
-  flex: 1;
-  min-width: 0;
-}
-.rv-stars {
-  font-size: 0.72rem;
-  letter-spacing: 3px;
-  color: var(--ink-30);
-  margin-bottom: 0.5rem;
-}
-.rv-quote {
-  font-family: var(--font-body);
-  font-size: 1.02rem;
-  font-style: italic;
-  color: var(--ink-70);
-  line-height: 1.8;
-  margin-bottom: 0.75rem;
-}
-.rv-person {
+.rv-person-info {
   display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 0.4rem;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
 }
 .rv-name {
   font-family: var(--font-display);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--ink);
-}
-.rv-sep {
-  color: var(--ink-10);
-  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .rv-role {
   font-family: var(--font-body);
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   color: var(--ink-30);
   line-height: 1.4;
 }
 
+/* Old rv-row style kept for backwards compat but hidden */
+.rv-list { display: none; }
+.rv-row  { display: none; }
+
+@media (max-width: 960px) {
+  .rv-cols { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 600px) {
-  .rv-row { padding: 1.25rem; gap: 1rem; }
-  .rv-avatar-wrap { width: 44px; height: 44px; }
+  .rv-cols { grid-template-columns: 1fr; }
+  .rv-col { padding: 1.25rem; }
 }
