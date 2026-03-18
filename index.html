@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Building the AI Bank: Speed, Judgment and Power — Emmanuel Daniel</title>
 <meta name="description" content="A groundbreaking book by Emmanuel Daniel on how AI is transforming banking — when speed turns judgment into power. Essential reading for CEOs, board members, regulators and fintech innovators.">
-<meta name="keywords" content="AI bank, banking AI, Emmanuel Daniel, Building the AI Bank, AI governance banking, machine speed banking, fintech book">
+<meta name="keywords" content="AI bank, banking AI, Emmanuel Daniel, Building the AI Bank, 构建AI银行, AI治理, 金融科技">
 <meta name="author" content="Emmanuel Daniel">
-
-<!-- Open Graph -->
 <meta property="og:type" content="book">
 <meta property="og:title" content="Building the AI Bank: Speed, Judgment and Power">
 <meta property="og:description" content="Emmanuel Daniel on how AI transforms banking governance, ethics, and products — when speed turns judgment into power.">
@@ -17,238 +15,330 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Building the AI Bank — Emmanuel Daniel">
 <meta name="twitter:description" content="Speed, Judgment and Power. The new book on AI in banking by Emmanuel Daniel.">
-
-<!-- Schema.org -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Book","name":"Building the AI Bank: Speed, Judgment and Power","author":{"@type":"Person","name":"Emmanuel Daniel","url":"https://www.emmanueldaniel.com","jobTitle":"Author, Entrepreneur, Futurist"},"publisher":{"@type":"Organization","name":"TAB Global"},"inLanguage":"en","genre":["Finance","Artificial Intelligence","Banking","Technology"],"description":"A landmark examination of how AI is reshaping banking governance, ethics, risk and products — and what leaders must do when speed turns judgment into power.","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"5","bestRating":"5"}}
+{"@context":"https://schema.org","@type":"Book","name":"Building the AI Bank: Speed, Judgment and Power","author":{"@type":"Person","name":"Emmanuel Daniel","url":"https://www.emmanueldaniel.com","jobTitle":"Author, Entrepreneur, Futurist"},"publisher":{"@type":"Organization","name":"TAB Global"},"inLanguage":["en","zh"],"genre":["Finance","Artificial Intelligence","Banking","Technology"],"description":"A landmark examination of how AI is reshaping banking governance, ethics, risk and products."}
 </script>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ══════════════════════════════════════════════════════
+     LANGUAGE SWITCHER BAR
+══════════════════════════════════════════════════════ -->
+<div class="lang-bar">
+  <div class="lang-bar-inner">
+    <span class="lang-label-en" data-show-en>Language:</span>
+    <span class="lang-label-zh" data-show-zh style="display:none">语言：</span>
+    <div class="lang-switcher">
+      <button class="lang-btn active" id="btn-en" onclick="setLang('en')" aria-label="Switch to English">English</button>
+      <button class="lang-btn" id="btn-zh" onclick="setLang('zh')" aria-label="切换至中文">中文</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════════════════ -->
 <nav id="nav">
   <a href="#" class="nav-logo">Emmanuel <span>Daniel</span></a>
   <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#toc">Contents</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#other-book">Other Book</a>
-    <a href="#buy">Get the Book</a>
+    <a href="#about">
+      <span data-show-en>About</span><span data-show-zh style="display:none">作者简介</span>
+    </a>
+    <a href="#toc">
+      <span data-show-en>Contents</span><span data-show-zh style="display:none">目录</span>
+    </a>
+    <a href="#reviews">
+      <span data-show-en>Reviews</span><span data-show-zh style="display:none">书评</span>
+    </a>
+    <a href="#other-book">
+      <span data-show-en>Other Book</span><span data-show-zh style="display:none">另一本书</span>
+    </a>
+    <a href="#buy">
+      <span data-show-en>Get the Book</span><span data-show-zh style="display:none">购买</span>
+    </a>
   </div>
-  <a href="#buy" class="nav-cta">Buy Now →</a>
+  <a href="#buy" class="nav-cta">
+    <span data-show-en>Buy Now →</span><span data-show-zh style="display:none">立即购买 →</span>
+  </a>
 </nav>
 
-<!-- ── HERO ── -->
+<!-- ══════════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════════ -->
 <section class="hero">
   <div class="hero-grid-bg"></div>
   <div class="hero-left">
-    <p class="hero-eyebrow">New Release · Emmanuel Daniel</p>
-    <h1 class="hero-title">Building the<br><span class="ai-word">AI</span> Bank</h1>
-    <p class="hero-subtitle-line">Speed · Judgment · Power</p>
+    <p class="hero-eyebrow">
+      <span data-show-en>New Release · Emmanuel Daniel</span>
+      <span data-show-zh style="display:none">最新出版 · 艾曼纽·丹尼尔</span>
+    </p>
+    <h1 class="hero-title">
+      <span data-show-en>Building the<br><span class="ai-word">AI</span> Bank</span>
+      <span data-show-zh style="display:none">构建<span class="ai-word">AI</span>银行</span>
+    </h1>
+    <p class="hero-subtitle-line">
+      <span data-show-en>Speed · Judgment · Power</span>
+      <span data-show-zh style="display:none">速度 · 判断 · 权力</span>
+    </p>
     <blockquote class="hero-excerpt">
-      When AI systems move from supporting humans to replacing them, banking enters a new era where speed replaces deliberation, and judgment is encoded into algorithms. The banks that win will not be the smartest — they will be the ones trusted to act at speed, at scale, without breaking the world.
+      <span data-show-en>When AI systems move from supporting humans to replacing them, banking enters a new era where speed replaces deliberation, and judgment is encoded into algorithms. The banks that win will not be the smartest — they will be the ones trusted to act at speed, at scale, without breaking the world.</span>
+      <span data-show-zh style="display:none">当人工智能系统从辅助人类转变为取代人类，银行业进入了一个全新时代——速度取代了审慎，判断被编码进算法之中。最终胜出的银行，不是最聪明的，而是那些值得信赖、能够高速、规模化运作而又不破坏世界秩序的机构。</span>
     </blockquote>
     <div class="hero-actions">
-      <a href="#buy" class="btn-primary">📖 Get Your Copy</a>
-      <a href="#toc" class="btn-secondary">Explore the Book</a>
+      <a href="#buy" class="btn-primary">
+        <span data-show-en>📖 Get Your Copy</span>
+        <span data-show-zh style="display:none">📖 立即购书</span>
+      </a>
+      <a href="#toc" class="btn-secondary">
+        <span data-show-en>Explore the Book</span>
+        <span data-show-zh style="display:none">探索本书</span>
+      </a>
     </div>
   </div>
   <div class="hero-right">
     <div class="book-display">
       <div class="book-glow"></div>
-      <img src="book-cover.png" alt="Building the AI Bank: Speed, Judgment and Power — book cover by Emmanuel Daniel" loading="eager">
+      <img src="book-cover.png" alt="Building the AI Bank — Emmanuel Daniel" loading="eager">
     </div>
   </div>
   <div class="hero-stats">
-    <div class="stat"><span class="stat-num">10</span><span class="stat-label">Chapters</span></div>
-    <div class="stat"><span class="stat-num">8+</span><span class="stat-label">Retailers</span></div>
-    <div class="stat"><span class="stat-num">30+</span><span class="stat-label">Years research</span></div>
+    <div class="stat">
+      <span class="stat-num">10</span>
+      <span class="stat-label"><span data-show-en>Chapters</span><span data-show-zh style="display:none">章节</span></span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">8+</span>
+      <span class="stat-label"><span data-show-en>Retailers</span><span data-show-zh style="display:none">销售渠道</span></span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">30+</span>
+      <span class="stat-label"><span data-show-en>Years research</span><span data-show-zh style="display:none">年研究</span></span>
+    </div>
   </div>
 </section>
 
 <div class="section-divider"></div>
 
-<!-- ── GET YOUR COPY ── -->
+<!-- ══════════════════════════════════════════════════════
+     GET YOUR COPY TODAY
+══════════════════════════════════════════════════════ -->
 <section class="section buy-section" id="buy">
   <div class="container">
     <div style="text-align:center;margin-bottom:3rem;">
-      <div class="section-eyebrow" style="justify-content:center;">Available Now</div>
-      <h2 class="section-heading" style="color:var(--ink);">Get Your Copy Today!</h2>
-      <p class="section-lead" style="margin:0 auto;text-align:center;">Order <em>Building the AI Bank</em> from your preferred retailer — available in print and digital formats worldwide.</p>
+      <div class="section-eyebrow" style="justify-content:center;">
+        <span data-show-en>Available Now</span><span data-show-zh style="display:none">现已上市</span>
+      </div>
+      <h2 class="section-heading" style="color:var(--ink);">
+        <span data-show-en>Get Your Copy Today!</span>
+        <span data-show-zh style="display:none">立即购书！</span>
+      </h2>
+      <p class="section-lead" style="margin:0 auto;text-align:center;">
+        <span data-show-en>Order <em>Building the AI Bank</em> from your preferred retailer — available in print and digital formats worldwide.</span>
+        <span data-show-zh style="display:none">从您偏好的零售商订购《构建AI银行》——全球纸质版与电子版均有发售。</span>
+      </p>
     </div>
     <div class="retailers-logo-grid">
-
-      <a href="https://www.amazon.com/s?k=building+the+ai+bank+emmanuel+daniel" target="_blank" rel="noopener" class="retailer-logo-card" aria-label="Buy on Amazon US">
-        <img src="https://www.innotribesolutions.com/wp-content/uploads/2026/02/Amazon_logo.jpg"
-             alt="Amazon" loading="lazy"
-             onerror="this.style.display='none';this.parentElement.querySelector('.retailer-logo-fallback').style.display='block'">
+      <a href="https://www.amazon.com/s?k=building+the+ai+bank+emmanuel+daniel" target="_blank" rel="noopener" class="retailer-logo-card">
+        <img src="https://www.innotribesolutions.com/wp-content/uploads/2026/02/Amazon_logo.jpg" alt="Amazon" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.retailer-logo-fallback').style.display='block'">
         <span class="retailer-logo-fallback" style="display:none">Amazon US</span>
         <span class="retailer-logo-label">Amazon US</span>
       </a>
-
-      <a href="https://play.google.com/store/books/details?id=bXSSEAAAQBAJ" target="_blank" rel="noopener" class="retailer-logo-card" aria-label="Buy on Google Books">
-        <img src="https://www.innotribesolutions.com/wp-content/uploads/2026/02/book-google.png"
-             alt="Google Books" loading="lazy"
-             onerror="this.style.display='none';this.parentElement.querySelector('.retailer-logo-fallback').style.display='block'">
+      <a href="https://play.google.com/store/books/details?id=bXSSEAAAQBAJ" target="_blank" rel="noopener" class="retailer-logo-card">
+        <img src="https://www.innotribesolutions.com/wp-content/uploads/2026/02/book-google.png" alt="Google Books" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.retailer-logo-fallback').style.display='block'">
         <span class="retailer-logo-fallback" style="display:none">Google Books</span>
         <span class="retailer-logo-label">Google Books</span>
       </a>
-
-      <a href="https://www.barnesandnoble.com/s/building+the+ai+bank+emmanuel+daniel" target="_blank" rel="noopener" class="retailer-logo-card" aria-label="Buy on Barnes &amp; Noble">
-        <img src="https://www.innotribesolutions.com/wp-content/uploads/2026/02/new-bnlogo.png"
-             alt="Barnes &amp; Noble" loading="lazy"
-             onerror="this.style.display='none';this.parentElement.querySelector('.retailer-logo-fallback').style.display='block'">
+      <a href="https://www.barnesandnoble.com/s/building+the+ai+bank+emmanuel+daniel" target="_blank" rel="noopener" class="retailer-logo-card">
+        <img src="https://www.innotribesolutions.com/wp-content/uploads/2026/02/new-bnlogo.png" alt="Barnes &amp; Noble" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.retailer-logo-fallback').style.display='block'">
         <span class="retailer-logo-fallback" style="display:none">Barnes &amp; Noble</span>
         <span class="retailer-logo-label">Barnes &amp; Noble</span>
       </a>
-
-      <a href="https://www.amazon.co.uk/s?k=building+the+ai+bank+emmanuel+daniel" target="_blank" rel="noopener" class="retailer-logo-card" aria-label="Buy on Amazon UK">
-        <img src="https://www.innotribesolutions.com/wp-content/uploads/2026/02/amazon-uk.png"
-             alt="Amazon UK" loading="lazy"
-             onerror="this.style.display='none';this.parentElement.querySelector('.retailer-logo-fallback').style.display='block'">
+      <a href="https://www.amazon.co.uk/s?k=building+the+ai+bank+emmanuel+daniel" target="_blank" rel="noopener" class="retailer-logo-card">
+        <img src="https://www.innotribesolutions.com/wp-content/uploads/2026/02/amazon-uk.png" alt="Amazon UK" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.retailer-logo-fallback').style.display='block'">
         <span class="retailer-logo-fallback" style="display:none">Amazon UK</span>
         <span class="retailer-logo-label">Amazon UK</span>
       </a>
-
-      <a href="https://www.bookdepository.com/search?searchTerm=building+the+ai+bank+emmanuel+daniel" target="_blank" rel="noopener" class="retailer-logo-card" aria-label="Buy on Book Depository">
-        <img src="https://www.innotribesolutions.com/wp-content/uploads/2026/02/book-d-logo.png"
-             alt="Book Depository" loading="lazy"
-             onerror="this.style.display='none';this.parentElement.querySelector('.retailer-logo-fallback').style.display='block'">
+      <a href="https://www.bookdepository.com/search?searchTerm=building+the+ai+bank+emmanuel+daniel" target="_blank" rel="noopener" class="retailer-logo-card">
+        <img src="https://www.innotribesolutions.com/wp-content/uploads/2026/02/book-d-logo.png" alt="Book Depository" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.retailer-logo-fallback').style.display='block'">
         <span class="retailer-logo-fallback" style="display:none">Book Depository</span>
         <span class="retailer-logo-label">Book Depository</span>
       </a>
-
-      <a href="https://www.waterstones.com/books/search/term/building+the+ai+bank+emmanuel+daniel" target="_blank" rel="noopener" class="retailer-logo-card" aria-label="Buy on Waterstones">
-        <img src="https://www.innotribesolutions.com/wp-content/uploads/2026/02/waterstone.png"
-             alt="Waterstones" loading="lazy"
-             onerror="this.style.display='none';this.parentElement.querySelector('.retailer-logo-fallback').style.display='block'">
+      <a href="https://www.waterstones.com/books/search/term/building+the+ai+bank+emmanuel+daniel" target="_blank" rel="noopener" class="retailer-logo-card">
+        <img src="https://www.innotribesolutions.com/wp-content/uploads/2026/02/waterstone.png" alt="Waterstones" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.retailer-logo-fallback').style.display='block'">
         <span class="retailer-logo-fallback" style="display:none">Waterstones</span>
         <span class="retailer-logo-label">Waterstones</span>
       </a>
-
-      <a href="https://www.worldscientific.com/worldscibooks/10.1142/13113" target="_blank" rel="noopener" class="retailer-logo-card" aria-label="Buy on World Scientific">
-        <img src="https://www.innotribesolutions.com/wp-content/uploads/2026/02/worldscientific-logo.png"
-             alt="World Scientific" loading="lazy"
-             onerror="this.style.display='none';this.parentElement.querySelector('.retailer-logo-fallback').style.display='block'">
+      <a href="https://www.worldscientific.com/worldscibooks/10.1142/13113" target="_blank" rel="noopener" class="retailer-logo-card">
+        <img src="https://www.innotribesolutions.com/wp-content/uploads/2026/02/worldscientific-logo.png" alt="World Scientific" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.retailer-logo-fallback').style.display='block'">
         <span class="retailer-logo-fallback" style="display:none">World Scientific</span>
         <span class="retailer-logo-label">World Scientific</span>
       </a>
-
-      <a href="https://item.m.jd.com/product/10044183813120.html" target="_blank" rel="noopener" class="retailer-logo-card" aria-label="Buy on JD.com">
-        <img src="https://www.innotribesolutions.com/wp-content/uploads/2026/02/jd-com.png"
-             alt="JD.com 京东" loading="lazy"
-             onerror="this.style.display='none';this.parentElement.querySelector('.retailer-logo-fallback').style.display='block'">
+      <a href="https://item.m.jd.com/product/10044183813120.html" target="_blank" rel="noopener" class="retailer-logo-card">
+        <img src="https://www.innotribesolutions.com/wp-content/uploads/2026/02/jd-com.png" alt="JD.com 京东" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.retailer-logo-fallback').style.display='block'">
         <span class="retailer-logo-fallback" style="display:none">JD.com 京东</span>
-        <span class="retailer-logo-label">JD.com 京东</span>
+        <span class="retailer-logo-label"><span data-show-en>JD.com 京东</span><span data-show-zh style="display:none">京东</span></span>
       </a>
-
     </div>
   </div>
 </section>
 
-<!-- ── TABLE OF CONTENTS ── -->
+<div class="section-divider"></div>
+
+<!-- ══════════════════════════════════════════════════════
+     TABLE OF CONTENTS
+══════════════════════════════════════════════════════ -->
 <section class="section bg-black" id="toc">
   <div class="container">
-    <div class="section-eyebrow">Inside the Book</div>
-    <h2 class="section-heading">Table of Contents</h2>
-    <p class="section-lead">Ten chapters tracing the full arc of AI's impact on banking — from machine-speed decisions to board-level governance and the ethics of autonomous finance.</p>
-
+    <div class="section-eyebrow">
+      <span data-show-en>Inside the Book</span><span data-show-zh style="display:none">书籍内容</span>
+    </div>
+    <h2 class="section-heading">
+      <span data-show-en>Table of Contents</span><span data-show-zh style="display:none">目录</span>
+    </h2>
+    <p class="section-lead">
+      <span data-show-en>Ten chapters tracing the full arc of AI's impact on banking — from machine-speed decisions to board-level governance and the ethics of autonomous finance.</span>
+      <span data-show-zh style="display:none">十个章节，全面追踪人工智能对银行业的深远影响——从机器速度的决策，到董事会层面的治理，再到自主金融的伦理问题。</span>
+    </p>
     <div style="margin-top:2.5rem;">
       <div class="toc-tabs">
-        <button class="toc-tab active" onclick="switchToc('part1',this)">Part I — The Machine Enters</button>
-        <button class="toc-tab" onclick="switchToc('part2',this)">Part II — Governance & Ethics</button>
-        <button class="toc-tab" onclick="switchToc('part3',this)">Part III — Products & Power</button>
-        <button class="toc-tab" onclick="switchToc('foreword',this)">Forewords & Preface</button>
+        <button class="toc-tab active" onclick="switchToc('part1',this)">
+          <span data-show-en>Part I — The Machine Enters</span><span data-show-zh style="display:none">第一部分 — 机器入场</span>
+        </button>
+        <button class="toc-tab" onclick="switchToc('part2',this)">
+          <span data-show-en>Part II — Governance &amp; Ethics</span><span data-show-zh style="display:none">第二部分 — 治理与伦理</span>
+        </button>
+        <button class="toc-tab" onclick="switchToc('part3',this)">
+          <span data-show-en>Part III — Products &amp; Power</span><span data-show-zh style="display:none">第三部分 — 产品与权力</span>
+        </button>
+        <button class="toc-tab" onclick="switchToc('foreword',this)">
+          <span data-show-en>Forewords &amp; Preface</span><span data-show-zh style="display:none">序言与前言</span>
+        </button>
       </div>
-
       <div class="toc-panel active" id="part1">
         <div class="toc-chapter-list">
-          <div class="toc-row" onclick="window.open('#buy')">
+          <div class="toc-row" onclick="location.href='#buy'">
             <span class="toc-row-num">01</span>
-            <div style="flex:1"><div class="toc-row-title">When Speed Turns Judgment into Power</div><div class="toc-row-desc">The defining shift: as AI moves from tool to agent, banking enters a new operating regime where the speed of decisions eclipses the depth of deliberation.</div></div>
+            <div style="flex:1">
+              <div class="toc-row-title"><span data-show-en>When Speed Turns Judgment into Power</span><span data-show-zh style="display:none">当速度将判断转化为权力</span></div>
+              <div class="toc-row-desc"><span data-show-en>The defining shift: as AI moves from tool to agent, banking enters a new operating regime where the speed of decisions eclipses the depth of deliberation.</span><span data-show-zh style="display:none">决定性转变：随着人工智能从工具演变为代理，银行业进入新的运营模式——决策速度超越了深度审议。</span></div>
+            </div>
             <span class="toc-row-pg">p.15</span><span class="toc-row-arrow">→</span>
           </div>
-          <div class="toc-row" onclick="window.open('#buy')">
+          <div class="toc-row" onclick="location.href='#buy'">
             <span class="toc-row-num">02</span>
-            <div style="flex:1"><div class="toc-row-title">The AI-Native Bank: Architecture of Transformation</div><div class="toc-row-desc">What it means to build a bank around AI from the ground up — infrastructure, talent, culture and the death of the legacy committee.</div></div>
+            <div style="flex:1">
+              <div class="toc-row-title"><span data-show-en>The AI-Native Bank: Architecture of Transformation</span><span data-show-zh style="display:none">AI原生银行：转型架构</span></div>
+              <div class="toc-row-desc"><span data-show-en>What it means to build a bank around AI from the ground up — infrastructure, talent, culture and the death of the legacy committee.</span><span data-show-zh style="display:none">从零开始围绕人工智能构建银行意味着什么——基础设施、人才、文化，以及传统委员会制度的终结。</span></div>
+            </div>
             <span class="toc-row-pg">p.37</span><span class="toc-row-arrow">→</span>
           </div>
-          <div class="toc-row" onclick="window.open('#buy')">
+          <div class="toc-row" onclick="location.href='#buy'">
             <span class="toc-row-num">03</span>
-            <div style="flex:1"><div class="toc-row-title">Customers Disappear from the Loop</div><div class="toc-row-desc">When AI manages the relationship, what happens to human agency? The paradox of hyper-personalised banking where the customer is last to know.</div></div>
+            <div style="flex:1">
+              <div class="toc-row-title"><span data-show-en>Customers Disappear from the Loop</span><span data-show-zh style="display:none">客户从决策链中消失</span></div>
+              <div class="toc-row-desc"><span data-show-en>When AI manages the relationship, what happens to human agency? The paradox of hyper-personalised banking where the customer is last to know.</span><span data-show-zh style="display:none">当人工智能管理客户关系时，人的主体性将何去何从？超个性化银行业务的悖论——客户成为最后知情者。</span></div>
+            </div>
             <span class="toc-row-pg">p.61</span><span class="toc-row-arrow">→</span>
           </div>
-          <div class="toc-row" onclick="window.open('#buy')">
+          <div class="toc-row" onclick="location.href='#buy'">
             <span class="toc-row-num">04</span>
-            <div style="flex:1"><div class="toc-row-title">Agent-Driven Banking: From Automation to Autonomy</div><div class="toc-row-desc">The leap from RPA and chatbots to autonomous agents that originate, price, approve and close — redefining what a banking product even is.</div></div>
+            <div style="flex:1">
+              <div class="toc-row-title"><span data-show-en>Agent-Driven Banking: From Automation to Autonomy</span><span data-show-zh style="display:none">代理驱动银行业：从自动化到自主性</span></div>
+              <div class="toc-row-desc"><span data-show-en>The leap from RPA and chatbots to autonomous agents that originate, price, approve and close — redefining what a banking product even is.</span><span data-show-zh style="display:none">从RPA和聊天机器人跨越到能够发起、定价、审批和成交的自主代理，重新定义银行产品的本质。</span></div>
+            </div>
             <span class="toc-row-pg">p.83</span><span class="toc-row-arrow">→</span>
           </div>
         </div>
       </div>
-
       <div class="toc-panel" id="part2">
         <div class="toc-chapter-list">
-          <div class="toc-row" onclick="window.open('#buy')">
+          <div class="toc-row" onclick="location.href='#buy'">
             <span class="toc-row-num">05</span>
-            <div style="flex:1"><div class="toc-row-title">Ethics Fails Not Through Intent, But Through Speed</div><div class="toc-row-desc">Why AI-era ethics crises emerge before reporting cycles can catch them — and what new governance infrastructure banks must build to stay ahead.</div></div>
+            <div style="flex:1">
+              <div class="toc-row-title"><span data-show-en>Ethics Fails Not Through Intent, But Through Speed</span><span data-show-zh style="display:none">伦理失败源于速度，而非意图</span></div>
+              <div class="toc-row-desc"><span data-show-en>Why AI-era ethics crises emerge before reporting cycles can catch them — and what new governance infrastructure banks must build to stay ahead.</span><span data-show-zh style="display:none">为何人工智能时代的伦理危机会在报告周期能够察觉之前便已爆发——以及银行必须构建哪些新的治理基础设施来保持领先。</span></div>
+            </div>
             <span class="toc-row-pg">p.107</span><span class="toc-row-arrow">→</span>
           </div>
-          <div class="toc-row" onclick="window.open('#buy')">
+          <div class="toc-row" onclick="location.href='#buy'">
             <span class="toc-row-num">06</span>
-            <div style="flex:1"><div class="toc-row-title">The Board in the Age of Machines</div><div class="toc-row-desc">CEOs, board members and regulators need a new lexicon. What fiduciary duty means when your bank acts on models nobody fully understands.</div></div>
+            <div style="flex:1">
+              <div class="toc-row-title"><span data-show-en>The Board in the Age of Machines</span><span data-show-zh style="display:none">机器时代的董事会</span></div>
+              <div class="toc-row-desc"><span data-show-en>CEOs, board members and regulators need a new lexicon. What fiduciary duty means when your bank acts on models nobody fully understands.</span><span data-show-zh style="display:none">首席执行官、董事会成员和监管者需要全新的词汇表。当银行依据无人完全理解的模型运作时，受托责任意味着什么。</span></div>
+            </div>
             <span class="toc-row-pg">p.131</span><span class="toc-row-arrow">→</span>
           </div>
-          <div class="toc-row" onclick="window.open('#buy')">
+          <div class="toc-row" onclick="location.href='#buy'">
             <span class="toc-row-num">07</span>
-            <div style="flex:1"><div class="toc-row-title">Governance at Machine Speed</div><div class="toc-row-desc">Risk management, compliance and audit in a real-time world. The tools, frameworks, and instincts that boards need when the machine is already three steps ahead.</div></div>
+            <div style="flex:1">
+              <div class="toc-row-title"><span data-show-en>Governance at Machine Speed</span><span data-show-zh style="display:none">机器速度下的治理</span></div>
+              <div class="toc-row-desc"><span data-show-en>Risk management, compliance and audit in a real-time world. The tools, frameworks, and instincts that boards need when the machine is already three steps ahead.</span><span data-show-zh style="display:none">实时世界中的风险管理、合规与审计。当机器已领先三步时，董事会所需的工具、框架与本能反应。</span></div>
+            </div>
             <span class="toc-row-pg">p.155</span><span class="toc-row-arrow">→</span>
           </div>
         </div>
       </div>
-
       <div class="toc-panel" id="part3">
         <div class="toc-chapter-list">
-          <div class="toc-row" onclick="window.open('#buy')">
+          <div class="toc-row" onclick="location.href='#buy'">
             <span class="toc-row-num">08</span>
-            <div style="flex:1"><div class="toc-row-title">Revolutionising the Very Products That Define Banking</div><div class="toc-row-desc">Credit, deposits, payments, insurance and wealth — reimagined not as offers, but as dynamic, continuously-learning agreements between AI and individuals.</div></div>
+            <div style="flex:1">
+              <div class="toc-row-title"><span data-show-en>Revolutionising the Very Products That Define Banking</span><span data-show-zh style="display:none">革新定义银行业的核心产品</span></div>
+              <div class="toc-row-desc"><span data-show-en>Credit, deposits, payments, insurance and wealth — reimagined not as offers, but as dynamic, continuously-learning agreements between AI and individuals.</span><span data-show-zh style="display:none">信贷、存款、支付、保险与财富管理——重新构想为人工智能与个人之间动态的、持续学习的协议，而非固定的要约。</span></div>
+            </div>
             <span class="toc-row-pg">p.179</span><span class="toc-row-arrow">→</span>
           </div>
-          <div class="toc-row" onclick="window.open('#buy')">
+          <div class="toc-row" onclick="location.href='#buy'">
             <span class="toc-row-num">09</span>
-            <div style="flex:1"><div class="toc-row-title">Banks Should Not Carry Their Digital Twins at Scale</div><div class="toc-row-desc">The platform trap: why building proprietary AI infrastructure is a liability for most banks, and what smart institutions will rent, partner, and abandon instead.</div></div>
+            <div style="flex:1">
+              <div class="toc-row-title"><span data-show-en>Banks Should Not Carry Their Digital Twins at Scale</span><span data-show-zh style="display:none">银行不应大规模维护其数字孪生</span></div>
+              <div class="toc-row-desc"><span data-show-en>The platform trap: why building proprietary AI infrastructure is a liability for most banks, and what smart institutions will rent, partner, and abandon instead.</span><span data-show-zh style="display:none">平台陷阱：为何构建专有人工智能基础设施对大多数银行而言是一种负担，以及聪明的机构将转而租用、合作或放弃什么。</span></div>
+            </div>
             <span class="toc-row-pg">p.203</span><span class="toc-row-arrow">→</span>
           </div>
-          <div class="toc-row" onclick="window.open('#buy')">
+          <div class="toc-row" onclick="location.href='#buy'">
             <span class="toc-row-num">10</span>
-            <div style="flex:1"><div class="toc-row-title">Trust the Two Currencies: Speed and Accountability</div><div class="toc-row-desc">The conclusion: the banks that win in an AI world will be those whose governance is trusted — not those whose models are fastest. A manifesto for the AI-era institution.</div></div>
+            <div style="flex:1">
+              <div class="toc-row-title"><span data-show-en>Trust the Two Currencies: Speed and Accountability</span><span data-show-zh style="display:none">信任两种货币：速度与问责</span></div>
+              <div class="toc-row-desc"><span data-show-en>The conclusion: the banks that win in an AI world will be those whose governance is trusted — not those whose models are fastest. A manifesto for the AI-era institution.</span><span data-show-zh style="display:none">结论：在人工智能世界中获胜的银行，将是那些治理体系值得信赖的机构——而非模型运算最快的机构。这是人工智能时代机构的宣言。</span></div>
+            </div>
             <span class="toc-row-pg">p.229</span><span class="toc-row-arrow">→</span>
           </div>
         </div>
       </div>
-
       <div class="toc-panel" id="foreword">
         <div class="toc-chapter-list">
           <div class="toc-row">
-            <span class="toc-row-num">Fwd.</span>
-            <div style="flex:1"><div class="toc-row-title">Foreword — Professor of Finance, National University of Singapore</div><div class="toc-row-desc">"This book challenges bankers to dare their institutions to transform into institutions they no longer control — where trust, innovation and speed are the currencies of the transition."</div></div>
+            <span class="toc-row-num"><span data-show-en>Fwd.</span><span data-show-zh style="display:none">序</span></span>
+            <div style="flex:1">
+              <div class="toc-row-title"><span data-show-en>Foreword — Professor of Finance, National University of Singapore</span><span data-show-zh style="display:none">序言 — 新加坡国立大学金融学教授</span></div>
+              <div class="toc-row-desc"><span data-show-en>"This book challenges bankers to dare their institutions to transform into institutions they no longer control — where trust, innovation and speed are the currencies of the transition."</span><span data-show-zh style="display:none">「本书挑战银行家们敢于推动机构向他们不再完全掌控的方向转型——在这一转型中，信任、创新与速度是流通的货币。」</span></div>
+            </div>
           </div>
           <div class="toc-row">
-            <span class="toc-row-num">Fwd.</span>
-            <div style="flex:1"><div class="toc-row-title">Foreword — Visiting Research Fellow, AI Governance Institute</div><div class="toc-row-desc">"As Daniel emphasises, the challenge is not building AI technologies into banking, but building institutions mature enough to manage them well."</div></div>
+            <span class="toc-row-num"><span data-show-en>Fwd.</span><span data-show-zh style="display:none">序</span></span>
+            <div style="flex:1">
+              <div class="toc-row-title"><span data-show-en>Foreword — Visiting Research Fellow, AI Governance Institute</span><span data-show-zh style="display:none">序言 — 人工智能治理研究所访问研究员</span></div>
+              <div class="toc-row-desc"><span data-show-en>"As Daniel emphasises, the challenge is not building AI technologies into banking, but building institutions mature enough to manage them well."</span><span data-show-zh style="display:none">「正如丹尼尔所强调的，挑战不在于将人工智能技术引入银行业，而在于构建足够成熟、能够妥善管理这些技术的机构。」</span></div>
+            </div>
           </div>
           <div class="toc-row">
-            <span class="toc-row-num">Pref.</span>
-            <div style="flex:1"><div class="toc-row-title">Preface — When Speed Turns Judgment Into Power</div><div class="toc-row-desc">The author's own framing of the central dilemma: the most powerful banking institutions of the next decade will be defined not by their capital, but by the quality of their automated judgment.</div></div>
+            <span class="toc-row-num"><span data-show-en>Pref.</span><span data-show-zh style="display:none">前言</span></span>
+            <div style="flex:1">
+              <div class="toc-row-title"><span data-show-en>Preface — When Speed Turns Judgment Into Power</span><span data-show-zh style="display:none">前言 — 当速度将判断转化为权力</span></div>
+              <div class="toc-row-desc"><span data-show-en>The author's own framing of the central dilemma: the most powerful banking institutions of the next decade will be defined not by their capital, but by the quality of their automated judgment.</span><span data-show-zh style="display:none">作者对核心困境的亲笔阐述：未来十年最强大的银行机构，将由其自动化判断的质量来定义，而非资本规模。</span></div>
+            </div>
           </div>
           <div class="toc-row">
-            <span class="toc-row-num">Gloss.</span>
-            <div style="flex:1"><div class="toc-row-title">Glossary, References and Index</div><div class="toc-row-desc">A comprehensive reference section covering AI terminology in banking, selected bibliography, and full subject index.</div></div>
+            <span class="toc-row-num"><span data-show-en>Gloss.</span><span data-show-zh style="display:none">词汇</span></span>
+            <div style="flex:1">
+              <div class="toc-row-title"><span data-show-en>Glossary, References and Index</span><span data-show-zh style="display:none">词汇表、参考文献与索引</span></div>
+              <div class="toc-row-desc"><span data-show-en>A comprehensive reference section covering AI terminology in banking, selected bibliography, and full subject index.</span><span data-show-zh style="display:none">综合参考部分，涵盖银行业人工智能术语、精选参考书目及完整主题索引。</span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -258,158 +348,102 @@
 
 <div class="section-divider"></div>
 
-<!-- ── KEY IDEAS ── -->
+<!-- ══════════════════════════════════════════════════════
+     KEY IDEAS
+══════════════════════════════════════════════════════ -->
 <section class="section bg-deep" id="ideas">
   <div class="container">
-    <div class="section-eyebrow">Key Concepts</div>
-    <h2 class="section-heading">Key Ideas in the Book</h2>
-    <p class="section-lead">The essential arguments that make <em>Building the AI Bank</em> required reading for every leader navigating the intersection of AI and financial institutions.</p>
-
+    <div class="section-eyebrow">
+      <span data-show-en>Key Concepts</span><span data-show-zh style="display:none">核心概念</span>
+    </div>
+    <h2 class="section-heading">
+      <span data-show-en>Key Ideas in the Book</span><span data-show-zh style="display:none">本书核心思想</span>
+    </h2>
+    <p class="section-lead">
+      <span data-show-en>The essential arguments that make <em>Building the AI Bank</em> required reading for every leader navigating the intersection of AI and financial institutions.</span>
+      <span data-show-zh style="display:none">这些核心论点使《构建AI银行》成为每位在人工智能与金融机构交汇处引航的领导者的必读之作。</span>
+    </p>
     <div class="ki-grid">
 
       <div class="ki-card">
         <div class="ki-header">
-          <div class="ki-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M20 8 L20 20 L28 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
+          <div class="ki-icon"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/><path d="M20 8 L20 20 L28 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <span class="ki-num">01</span>
         </div>
-        <div class="ki-title">Speed as a Governance Crisis</div>
-        <div class="ki-body">When AI acts faster than humans can review, banking enters a new risk regime. Ethics failures no longer arise from intention — they emerge from velocity. Banks must build governance infrastructure that operates at machine speed, not board-meeting speed.</div>
+        <div class="ki-title"><span data-show-en>Speed as a Governance Crisis</span><span data-show-zh style="display:none">速度作为治理危机</span></div>
+        <div class="ki-body"><span data-show-en>When AI acts faster than humans can review, banking enters a new risk regime. Ethics failures no longer arise from intention — they emerge from velocity. Banks must build governance that operates at machine speed.</span><span data-show-zh style="display:none">当人工智能的行动速度超过人类的审查能力，银行业便进入全新的风险体制。伦理失败不再源于意图——而是源于速度本身。银行必须构建以机器速度运转的治理体系。</span></div>
       </div>
 
       <div class="ki-card">
         <div class="ki-header">
-          <div class="ki-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M13 20 C13 16 16.5 13 20 13 C23.5 13 27 16 27 20 C27 24 23.5 27 20 27" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              <circle cx="20" cy="20" r="3" fill="currentColor"/>
-            </svg>
-          </div>
+          <div class="ki-icon"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/><path d="M13 20 C13 16 16.5 13 20 13 C23.5 13 27 16 27 20 C27 24 23.5 27 20 27" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="20" cy="20" r="3" fill="currentColor"/></svg></div>
           <span class="ki-num">02</span>
         </div>
-        <div class="ki-title">Judgment Encoded into Code</div>
-        <div class="ki-body">Judgment — once the exclusive domain of experienced bankers — is being encoded into models. This is not just automation; it is the transfer of institutional wisdom to algorithms. Whoever designs the model makes the moral choices.</div>
+        <div class="ki-title"><span data-show-en>Judgment Encoded into Code</span><span data-show-zh style="display:none">判断力被编码入程序</span></div>
+        <div class="ki-body"><span data-show-en>Judgment — once the exclusive domain of experienced bankers — is being encoded into models. This is not just automation; it is the transfer of institutional wisdom to algorithms. Whoever designs the model makes the moral choices.</span><span data-show-zh style="display:none">判断力——曾是资深银行家的专属领域——正被编码进模型之中。这不仅仅是自动化；这是将机构智慧转移给算法。设计模型的人，便做出了道德选择。</span></div>
       </div>
 
       <div class="ki-card">
         <div class="ki-header">
-          <div class="ki-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/>
-              <rect x="12" y="17" width="16" height="11" rx="1.5" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M15 17 L15 14 C15 11.8 17.2 10 20 10 C22.8 10 25 11.8 25 14 L25 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </div>
+          <div class="ki-icon"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/><rect x="12" y="17" width="16" height="11" rx="1.5" stroke="currentColor" stroke-width="1.8"/><path d="M15 17 L15 14 C15 11.8 17.2 10 20 10 C22.8 10 25 11.8 25 14 L25 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           <span class="ki-num">03</span>
         </div>
-        <div class="ki-title">The New Role of the Board</div>
-        <div class="ki-body">CEOs and board members face fiduciary duties in a world where their most important decisions are made by systems they do not fully understand. Daniel provides a new framework for board oversight in AI-era institutions.</div>
+        <div class="ki-title"><span data-show-en>The New Role of the Board</span><span data-show-zh style="display:none">董事会的新角色</span></div>
+        <div class="ki-body"><span data-show-en>CEOs and board members face fiduciary duties in a world where their most important decisions are made by systems they do not fully understand. Daniel provides a new framework for board oversight in AI-era institutions.</span><span data-show-zh style="display:none">在一个最重要决策由他们并不完全理解的系统作出的世界里，首席执行官和董事会成员面临受托责任的严峻挑战。丹尼尔为人工智能时代的机构提供了董事会监督的新框架。</span></div>
       </div>
 
       <div class="ki-card">
         <div class="ki-header">
-          <div class="ki-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/>
-              <circle cx="20" cy="16" r="4" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M12 30 C12 25.6 15.6 22 20 22 C24.4 22 28 25.6 28 30" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              <line x1="28" y1="12" x2="32" y2="8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              <line x1="30" y1="10" x2="26" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/>
-            </svg>
-          </div>
+          <div class="ki-icon"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="16" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M12 30 C12 25.6 15.6 22 20 22 C24.4 22 28 25.6 28 30" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="28" y1="12" x2="32" y2="8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           <span class="ki-num">04</span>
         </div>
-        <div class="ki-title">Customers Disappear from the Loop</div>
-        <div class="ki-body">As AI intermediates the entire banking relationship — from onboarding to credit decisions — the customer becomes the last to know. The book questions what consent and transparency mean when the system acts before anyone asks.</div>
+        <div class="ki-title"><span data-show-en>Customers Disappear from the Loop</span><span data-show-zh style="display:none">客户从决策链中消失</span></div>
+        <div class="ki-body"><span data-show-en>As AI intermediates the entire banking relationship, the customer becomes the last to know. The book questions what consent and transparency mean when the system acts before anyone asks.</span><span data-show-zh style="display:none">随着人工智能成为整个银行关系的中介，客户成为最后知情者。本书追问：当系统在任何人提问之前便已行动，同意与透明度意味着什么？</span></div>
       </div>
 
       <div class="ki-card">
         <div class="ki-header">
-          <div class="ki-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M10 20 C10 14.5 14.5 10 20 10 C25.5 10 30 14.5 30 20 C30 25.5 25.5 30 20 30 C14.5 30 10 25.5 10 20" stroke="currentColor" stroke-width="1.8" stroke-dasharray="3 2"/>
-              <path d="M16 20 L18.5 22.5 L24 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
+          <div class="ki-icon"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/><path d="M10 20 C10 14.5 14.5 10 20 10 C25.5 10 30 14.5 30 20 C30 25.5 25.5 30 20 30 C14.5 30 10 25.5 10 20" stroke="currentColor" stroke-width="1.8" stroke-dasharray="3 2"/><path d="M16 20 L18.5 22.5 L24 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <span class="ki-num">05</span>
         </div>
-        <div class="ki-title">From Products to Living Agreements</div>
-        <div class="ki-body">AI transforms financial products from fixed offers into continuously-updating agreements. A credit line, an insurance policy, a deposit account — all become dynamic instruments recalibrated in real time by models learning from behaviour.</div>
+        <div class="ki-title"><span data-show-en>From Products to Living Agreements</span><span data-show-zh style="display:none">从产品到动态协议</span></div>
+        <div class="ki-body"><span data-show-en>AI transforms financial products from fixed offers into continuously-updating agreements. A credit line, an insurance policy, a deposit account — all become dynamic instruments recalibrated in real time by models learning from behaviour.</span><span data-show-zh style="display:none">人工智能将金融产品从固定的要约转变为持续更新的协议。信用额度、保险单、存款账户——均成为由实时学习行为的模型不断重新校准的动态工具。</span></div>
       </div>
 
       <div class="ki-card">
         <div class="ki-header">
-          <div class="ki-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/>
-              <line x1="20" y1="10" x2="20" y2="18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              <line x1="14" y1="18" x2="26" y2="18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              <path d="M14 18 L12 23" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              <path d="M26 18 L28 23" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              <line x1="10" y1="23" x2="30" y2="23" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </div>
+          <div class="ki-icon"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/><line x1="20" y1="10" x2="20" y2="18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="14" y1="18" x2="26" y2="18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M14 18 L12 23" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M26 18 L28 23" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="10" y1="23" x2="30" y2="23" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <span class="ki-num">06</span>
         </div>
-        <div class="ki-title">Trust as the Ultimate Currency</div>
-        <div class="ki-body">The banks that win the AI era will not be the ones with the most powerful models. They will be the ones most trusted to deploy power responsibly. Accountability is the only sustainable competitive advantage in autonomous banking.</div>
+        <div class="ki-title"><span data-show-en>Trust as the Ultimate Currency</span><span data-show-zh style="display:none">信任作为终极货币</span></div>
+        <div class="ki-body"><span data-show-en>The banks that win the AI era will be the ones most trusted to deploy power responsibly. Accountability is the only sustainable competitive advantage in an age of autonomous banking.</span><span data-show-zh style="display:none">赢得人工智能时代的银行，将是那些最值得信赖、能够负责任地行使权力的机构。问责制是自主银行业时代唯一可持续的竞争优势。</span></div>
       </div>
 
       <div class="ki-card">
         <div class="ki-header">
-          <div class="ki-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/>
-              <rect x="10" y="14" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M22 17 L30 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              <path d="M22 20 L30 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              <path d="M22 23 L27 23" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </div>
+          <div class="ki-icon"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/><rect x="10" y="14" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M22 17 L30 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M22 20 L30 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M22 23 L27 23" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           <span class="ki-num">07</span>
         </div>
-        <div class="ki-title">Don't Build What You Can Rent</div>
-        <div class="ki-body">Most banks are building AI infrastructure they cannot sustain. Proprietary AI stacks are a liability for all but a handful of institutions — smart banks define their strategy around what they own, what they partner, and what they abandon.</div>
+        <div class="ki-title"><span data-show-en>Don't Build What You Can Rent</span><span data-show-zh style="display:none">不要建造可以租用的东西</span></div>
+        <div class="ki-body"><span data-show-en>Proprietary AI stacks are a liability for all but a handful of institutions — smart banks define their strategy around what they own, what they partner, and what they abandon.</span><span data-show-zh style="display:none">专有人工智能技术栈对绝大多数机构而言是一种负担——聪明的银行围绕自有、合作与放弃来制定其战略。</span></div>
       </div>
 
       <div class="ki-card">
         <div class="ki-header">
-          <div class="ki-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/>
-              <circle cx="20" cy="16" r="4" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M12 30 C12 26 15.6 23 20 23 C24.4 23 28 26 28 30" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              <path d="M26 10 L30 14 M30 10 L26 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </div>
+          <div class="ki-icon"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="16" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M12 30 C12 26 15.6 23 20 23 C24.4 23 28 26 28 30" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M26 10 L30 14 M30 10 L26 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           <span class="ki-num">08</span>
         </div>
-        <div class="ki-title">The Agentic Leap</div>
-        <div class="ki-body">The book distinguishes between AI as automation and AI as agency. The agentic leap — from chatbot to agent that can originate, negotiate and close a financial transaction — is the most consequential moment in banking history since ATMs.</div>
+        <div class="ki-title"><span data-show-en>The Agentic Leap</span><span data-show-zh style="display:none">代理性飞跃</span></div>
+        <div class="ki-body"><span data-show-en>The leap from chatbot to agent that can originate, negotiate and close a financial transaction is the most consequential moment in banking history since ATMs.</span><span data-show-zh style="display:none">从聊天机器人到能够发起、谈判和完成金融交易的代理人的飞跃，是自ATM以来银行业历史上最具深远影响的时刻。</span></div>
       </div>
 
       <div class="ki-card">
         <div class="ki-header">
-          <div class="ki-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/>
-              <circle cx="20" cy="20" r="7" stroke="currentColor" stroke-width="1.8"/>
-              <line x1="20" y1="10" x2="20" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              <line x1="20" y1="27" x2="20" y2="30" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              <line x1="10" y1="20" x2="13" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              <line x1="27" y1="20" x2="30" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </div>
+          <div class="ki-icon"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="20" r="7" stroke="currentColor" stroke-width="1.8"/><line x1="20" y1="10" x2="20" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="20" y1="27" x2="20" y2="30" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="10" y1="20" x2="13" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="27" y1="20" x2="30" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           <span class="ki-num">09</span>
         </div>
-        <div class="ki-title">Geopolitics Shapes the AI Bank</div>
-        <div class="ki-body">DeepSeek, sovereign AI clouds, and the fragmentation of the global technology stack mean that AI strategy in banking is now inseparable from geopolitics. Which LLM can a regulated bank use? Who owns the training data?</div>
+        <div class="ki-title"><span data-show-en>Geopolitics Shapes the AI Bank</span><span data-show-zh style="display:none">地缘政治塑造AI银行</span></div>
+        <div class="ki-body"><span data-show-en>DeepSeek, sovereign AI clouds, and the fragmentation of the global technology stack mean that AI strategy in banking is now inseparable from geopolitics.</span><span data-show-zh style="display:none">DeepSeek、主权人工智能云，以及全球技术栈的碎片化，意味着银行业的人工智能战略如今与地缘政治密不可分。</span></div>
       </div>
 
     </div>
@@ -418,79 +452,91 @@
 
 <div class="section-divider"></div>
 
-<!-- ── REVIEWS ── -->
+<!-- ══════════════════════════════════════════════════════
+     REVIEWS
+══════════════════════════════════════════════════════ -->
 <section class="section bg-black" id="reviews">
   <div class="container">
-    <div class="section-eyebrow">Praise for the Book</div>
-    <h2 class="section-heading">Reviews</h2>
-    <p class="section-lead">Endorsed by global banking leaders, regulators, and AI governance experts.</p>
-
+    <div class="section-eyebrow">
+      <span data-show-en>Praise for the Book</span><span data-show-zh style="display:none">书评推荐</span>
+    </div>
+    <h2 class="section-heading">
+      <span data-show-en>Reviews</span><span data-show-zh style="display:none">书评</span>
+    </h2>
+    <p class="section-lead">
+      <span data-show-en>Endorsed by global banking leaders, regulators, and AI governance experts.</span>
+      <span data-show-zh style="display:none">获全球银行业领袖、监管机构及人工智能治理专家联袂推荐。</span>
+    </p>
     <div class="rv-cols">
 
       <div class="rv-col">
         <div class="rv-stars">★★★★★</div>
-        <p class="rv-quote">"This book challenges bankers to design deliberately for an AI-native future or risk drifting into institutions they no longer control. Essential reading where trust, innovation, and accountability must align at machine speed."</p>
+        <p class="rv-quote">
+          <span data-show-en>"This book challenges bankers to design deliberately for an AI-native future or risk drifting into institutions they no longer control. Essential reading where trust, innovation, and accountability must align at machine speed."</span>
+          <span data-show-zh style="display:none">「本书挑战银行家有意识地为AI原生未来进行设计，否则将面临漂向他们不再掌控的机构的风险。信任、创新与问责必须以机器速度协同对齐的必读之作。」</span>
+        </p>
         <div class="rv-attribution">
           <div class="rv-avatar-wrap">
-            <img class="rv-avatar" src="https://p7q8s5f8.rocketcdn.me/wp-content/uploads/2025/08/David-Hardoon-StanChart.jpg"
-                 alt="David R. Hardoon" loading="lazy"
-                 onerror="this.style.display='none';this.parentElement.querySelector('.rv-initials').style.display='flex'">
+            <img class="rv-avatar" src="https://p7q8s5f8.rocketcdn.me/wp-content/uploads/2025/08/David-Hardoon-StanChart.jpg" alt="David R. Hardoon" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.rv-initials').style.display='flex'">
             <div class="rv-initials" style="display:none">DH</div>
           </div>
           <div class="rv-person-info">
             <span class="rv-name">David R. Hardoon</span>
-            <span class="rv-role">Global Head of AI Enablement, Standard Chartered Bank</span>
+            <span class="rv-role"><span data-show-en>Global Head of AI Enablement, Standard Chartered Bank</span><span data-show-zh style="display:none">渣打银行全球人工智能赋能主管</span></span>
           </div>
         </div>
       </div>
 
       <div class="rv-col">
         <div class="rv-stars">★★★★★</div>
-        <p class="rv-quote">"This is essential reading for board members and treasury executives. Its themes should permeate the entire organization — from product development and marketing to compliance and ethics committees."</p>
+        <p class="rv-quote">
+          <span data-show-en>"This is essential reading for board members and treasury executives. Its themes should permeate the entire organization — from product development and marketing to compliance and ethics committees."</span>
+          <span data-show-zh style="display:none">「这是董事会成员和财务主管的必读之作。其主题应渗透整个组织——从产品开发和市场营销，到合规和伦理委员会。」</span>
+        </p>
         <div class="rv-attribution">
           <div class="rv-avatar-wrap">
-            <img class="rv-avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIKHnYqPueF9KS5Nz3nRNf7po8yZA10W5ekw&s"
-                 alt="Anoop Rai" loading="lazy"
-                 onerror="this.style.display='none';this.parentElement.querySelector('.rv-initials').style.display='flex'">
+            <img class="rv-avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIKHnYqPueF9KS5Nz3nRNf7po8yZA10W5ekw&s" alt="Anoop Rai" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.rv-initials').style.display='flex'">
             <div class="rv-initials" style="display:none">AR</div>
           </div>
           <div class="rv-person-info">
             <span class="rv-name">Anoop Rai</span>
-            <span class="rv-role">Professor of Finance, Frank G. Zarb School of Business, Hofstra University, New York</span>
+            <span class="rv-role"><span data-show-en>Professor of Finance, Frank G. Zarb School of Business, Hofstra University</span><span data-show-zh style="display:none">霍夫斯特拉大学弗兰克·扎布商学院金融学教授</span></span>
           </div>
         </div>
       </div>
 
       <div class="rv-col">
         <div class="rv-stars">★★★★★</div>
-        <p class="rv-quote">"This book is the blueprint for transformation — a guide to making Speed to Change and Speed to Trust the two currencies of the new bank."</p>
+        <p class="rv-quote">
+          <span data-show-en>"This book is the blueprint for transformation — a guide to making Speed to Change and Speed to Trust the two currencies of the new bank."</span>
+          <span data-show-zh style="display:none">「本书是转型的蓝图——指引将变革速度与信任速度打造为新型银行两种核心货币的行动指南。」</span>
+        </p>
         <div class="rv-attribution">
           <div class="rv-avatar-wrap">
-            <img class="rv-avatar" src="https://conferences.marketing-interactive.com/digital-marketing-asia/wp-content/uploads/sites/31/2021/10/Axel-Winter-photo.jpg"
-                 alt="Axel Winter" loading="lazy"
-                 onerror="this.style.display='none';this.parentElement.querySelector('.rv-initials').style.display='flex'">
+            <img class="rv-avatar" src="https://conferences.marketing-interactive.com/digital-marketing-asia/wp-content/uploads/sites/31/2021/10/Axel-Winter-photo.jpg" alt="Axel Winter" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.rv-initials').style.display='flex'">
             <div class="rv-initials" style="display:none">AW</div>
           </div>
           <div class="rv-person-info">
             <span class="rv-name">Axel Winter</span>
-            <span class="rv-role">Former Global Chief Architect, Standard Chartered Bank</span>
+            <span class="rv-role"><span data-show-en>Former Global Chief Architect, Standard Chartered Bank</span><span data-show-zh style="display:none">渣打银行前全球首席架构师</span></span>
           </div>
         </div>
       </div>
 
       <div class="rv-col">
         <div class="rv-stars">★★★★★</div>
-        <p class="rv-quote">"A critical issue for innovating institutions will be to interleave these technologies into banking without losing sight of the many risks that require deep judgment to manage well."</p>
+        <p class="rv-quote">
+          <span data-show-en>"A critical issue for innovating institutions will be to interleave these technologies into banking without losing sight of the many risks that require deep judgment to manage well."</span>
+          <span data-show-zh style="display:none">「对创新机构而言，关键挑战在于将这些技术融入银行业务的同时，不忽视那些需要深度判断才能妥善管理的种种风险。」</span>
+        </p>
         <div class="rv-attribution">
           <div class="rv-avatar-wrap">
-            <img class="rv-avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7INYNQhfUB3BaBsOzAW6tFybhRQ-JRxPxxw&s"
-                 alt="Mark Flood" loading="lazy"
-                 onerror="this.style.display='none';this.parentElement.querySelector('.rv-initials').style.display='flex'">
+            <img class="rv-avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7INYNQhfUB3BaBsOzAW6tFybhRQ-JRxPxxw&s" alt="Mark Flood" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.rv-initials').style.display='flex'">
             <div class="rv-initials" style="display:none">MF</div>
           </div>
           <div class="rv-person-info">
             <span class="rv-name">Mark Flood</span>
-            <span class="rv-role">Visiting Research Scholar, Center for Financial Policy, University of Maryland, USA</span>
+            <span class="rv-role"><span data-show-en>Visiting Research Scholar, Center for Financial Policy, University of Maryland</span><span data-show-zh style="display:none">马里兰大学金融政策中心访问研究学者</span></span>
           </div>
         </div>
       </div>
@@ -501,231 +547,242 @@
 
 <div class="section-divider"></div>
 
-<!-- ── WHO MUST BUY ── -->
+<!-- ══════════════════════════════════════════════════════
+     WHO MUST BUY
+══════════════════════════════════════════════════════ -->
 <section class="section bg-deep" id="who">
   <div class="container">
-    <div class="section-eyebrow">Readership</div>
-    <h2 class="section-heading">Who Must Buy This Book</h2>
-    <p class="section-lead">Written for practitioners who need to act — not just observe. If AI is reshaping your industry, your institution, or your career, this book is your operational guide.</p>
+    <div class="section-eyebrow">
+      <span data-show-en>Readership</span><span data-show-zh style="display:none">读者群体</span>
+    </div>
+    <h2 class="section-heading">
+      <span data-show-en>Who Must Buy This Book</span><span data-show-zh style="display:none">谁应该购买本书</span>
+    </h2>
+    <p class="section-lead">
+      <span data-show-en>Written for practitioners who need to act — not just observe. If AI is reshaping your industry, your institution, or your career, this book is your operational guide.</span>
+      <span data-show-zh style="display:none">专为需要付诸行动而非仅仅观望的实践者而写。如果人工智能正在重塑您的行业、机构或职业，本书就是您的实操指南。</span>
+    </p>
     <div class="who-grid">
-
       <div class="who-card">
         <div class="who-icon">🏦</div>
         <div>
-          <div class="who-title">Bank CEOs, Board Directors & Executives</div>
-          <div class="who-body">Leaders who need to understand what AI governance actually requires — not in theory, but in practice. How do you hold a model accountable? What does fiduciary duty look like when your most important decisions are made by algorithms you cannot fully audit?</div>
+          <div class="who-title"><span data-show-en>Bank CEOs, Board Directors &amp; Executives</span><span data-show-zh style="display:none">银行首席执行官、董事会成员及高管</span></div>
+          <div class="who-body"><span data-show-en>Leaders who need to understand what AI governance actually requires — not in theory, but in practice. How do you hold a model accountable? What does fiduciary duty look like when your most important decisions are made by algorithms you cannot fully audit?</span><span data-show-zh style="display:none">需要理解人工智能治理实际要求的领导者——不是理论层面，而是实践层面。如何让模型承担责任？当最重要的决策由您无法完全审计的算法作出时，受托责任意味着什么？</span></div>
         </div>
       </div>
-
       <div class="who-card">
         <div class="who-icon">⚙️</div>
         <div>
-          <div class="who-title">Chief Technology & Chief Digital Officers</div>
-          <div class="who-body">Technology leaders building AI infrastructure inside regulated institutions — navigating the tension between move-fast cultures and compliance-first mandates, and deciding what to build, what to buy, and what to partner on in the AI stack.</div>
+          <div class="who-title"><span data-show-en>Chief Technology &amp; Chief Digital Officers</span><span data-show-zh style="display:none">首席技术官与首席数字官</span></div>
+          <div class="who-body"><span data-show-en>Technology leaders building AI infrastructure inside regulated institutions — navigating the tension between move-fast cultures and compliance-first mandates, and deciding what to build, buy, and partner on in the AI stack.</span><span data-show-zh style="display:none">在受监管机构内部构建人工智能基础设施的技术领导者——在快速行动文化与合规优先要求之间寻求平衡，并决定在人工智能技术栈中构建什么、购买什么、与谁合作。</span></div>
         </div>
       </div>
-
       <div class="who-card">
         <div class="who-icon">📋</div>
         <div>
-          <div class="who-title">Regulators, Policy Makers & Central Bankers</div>
-          <div class="who-body">Officials who must design regulatory frameworks for AI systems that act faster than supervisory cycles. The book provides the practitioner's perspective on what is actually happening inside banks — essential context for anyone writing the rules.</div>
+          <div class="who-title"><span data-show-en>Regulators, Policy Makers &amp; Central Bankers</span><span data-show-zh style="display:none">监管机构、政策制定者与央行官员</span></div>
+          <div class="who-body"><span data-show-en>Officials who must design regulatory frameworks for AI systems that act faster than supervisory cycles. The book provides the practitioner's perspective on what is actually happening inside banks — essential context for anyone writing the rules.</span><span data-show-zh style="display:none">必须为行动速度超越监管周期的人工智能系统设计监管框架的官员。本书提供了银行内部实际情况的从业者视角——对于任何规则制定者而言都是不可或缺的背景知识。</span></div>
         </div>
       </div>
-
       <div class="who-card">
         <div class="who-icon">🚀</div>
         <div>
-          <div class="who-title">Fintech Founders & Startup Investors</div>
-          <div class="who-body">Entrepreneurs who want to understand not just where the opportunity lies, but where the institutional resistance will come from — and how to build AI-native financial products that can survive regulatory scrutiny and earn genuine customer trust.</div>
+          <div class="who-title"><span data-show-en>Fintech Founders &amp; Startup Investors</span><span data-show-zh style="display:none">金融科技创始人与初创企业投资者</span></div>
+          <div class="who-body"><span data-show-en>Entrepreneurs who want to understand not just where the opportunity lies, but where the institutional resistance will come from — and how to build AI-native financial products that can survive regulatory scrutiny and earn genuine customer trust.</span><span data-show-zh style="display:none">不仅想了解机遇所在，更想理解机构阻力来源的创业者——以及如何构建能够经受监管审查、赢得客户真正信任的AI原生金融产品。</span></div>
         </div>
       </div>
-
       <div class="who-card">
         <div class="who-icon">💼</div>
         <div>
-          <div class="who-title">Risk, Compliance & Internal Audit Leaders</div>
-          <div class="who-body">Professionals on the front line of AI governance whose frameworks were designed for human decision-making. This book gives them the conceptual foundation to rebuild risk and compliance architecture for a world where the machine decides first.</div>
+          <div class="who-title"><span data-show-en>Risk, Compliance &amp; Internal Audit Leaders</span><span data-show-zh style="display:none">风险、合规与内部审计主管</span></div>
+          <div class="who-body"><span data-show-en>Professionals on the front line of AI governance whose frameworks were designed for human decision-making. This book gives them the conceptual foundation to rebuild risk and compliance architecture for a world where the machine decides first.</span><span data-show-zh style="display:none">处于人工智能治理前线的专业人士，其框架最初是为人类决策而设计的。本书为他们提供了概念基础，用以为机器优先决策的世界重建风险与合规架构。</span></div>
         </div>
       </div>
-
       <div class="who-card">
         <div class="who-icon">🎓</div>
         <div>
-          <div class="who-title">Students, Academics & Researchers in Finance & AI</div>
-          <div class="who-body">Next-generation talent entering a banking industry mid-transformation — and academics studying the intersection of AI, institutional governance and financial stability. The book bridges theory and the messy reality of implementation at scale.</div>
+          <div class="who-title"><span data-show-en>Students, Academics &amp; Researchers in Finance &amp; AI</span><span data-show-zh style="display:none">金融与AI领域的学生、学者与研究人员</span></div>
+          <div class="who-body"><span data-show-en>Next-generation talent entering a banking industry mid-transformation — and academics studying the intersection of AI, institutional governance and financial stability. The book bridges theory and the messy reality of implementation at scale.</span><span data-show-zh style="display:none">进入转型期银行业的新一代人才，以及研究人工智能、机构治理与金融稳定交叉领域的学者。本书在理论与大规模实施的复杂现实之间架起桥梁。</span></div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
 <div class="section-divider"></div>
 
-<!-- ── BLOGS, VIDEOS & ARTICLES ── -->
+<!-- ══════════════════════════════════════════════════════
+     BLOGS, VIDEOS & ARTICLES
+══════════════════════════════════════════════════════ -->
 <section class="section bg-black" id="blog">
   <div class="container">
-    <div class="section-eyebrow">From the Blog</div>
-    <h2 class="section-heading">Blogs, Videos & Articles</h2>
-    <p class="section-lead">Emmanuel's ongoing commentary on finance, geopolitics, travel and society — the ideas that feed the book and extend beyond it.</p>
-
+    <div class="section-eyebrow">
+      <span data-show-en>From the Blog</span><span data-show-zh style="display:none">博客精选</span>
+    </div>
+    <h2 class="section-heading">
+      <span data-show-en>Blogs, Videos &amp; Articles</span><span data-show-zh style="display:none">博客、视频与文章</span>
+    </h2>
+    <p class="section-lead">
+      <span data-show-en>Emmanuel's ongoing commentary on finance, geopolitics, travel and society — the ideas that feed the book and extend beyond it.</span>
+      <span data-show-zh style="display:none">艾曼纽关于金融、地缘政治、旅行与社会的持续评论——滋养本书并延伸其思想边界的洞见。</span>
+    </p>
     <div style="margin-top:2.5rem;">
       <div class="blogs-tabs">
-        <button class="blog-tab active" onclick="switchBlog('geopolitics',this)">Geopolitics</button>
-        <button class="blog-tab" onclick="switchBlog('finance',this)">Future of Finance</button>
-        <button class="blog-tab" onclick="switchBlog('travel',this)">Traveller's Tales</button>
-        <button class="blog-tab" onclick="switchBlog('reviews',this)">Reviews</button>
-        <button class="blog-tab" onclick="switchBlog('footnotes',this)">Footnotes</button>
+        <button class="blog-tab active" onclick="switchBlog('geo',this)"><span data-show-en>Geopolitics</span><span data-show-zh style="display:none">地缘政治</span></button>
+        <button class="blog-tab" onclick="switchBlog('fin',this)"><span data-show-en>Future of Finance</span><span data-show-zh style="display:none">金融未来</span></button>
+        <button class="blog-tab" onclick="switchBlog('trv',this)"><span data-show-en>Traveller's Tales</span><span data-show-zh style="display:none">旅行故事</span></button>
+        <button class="blog-tab" onclick="switchBlog('rev',this)"><span data-show-en>Reviews</span><span data-show-zh style="display:none">书评</span></button>
+        <button class="blog-tab" onclick="switchBlog('fn',this)"><span data-show-en>Footnotes</span><span data-show-zh style="display:none">注脚</span></button>
       </div>
 
-      <div class="blog-panel active" id="geopolitics">
+      <div class="blog-panel active" id="geo">
         <div class="blog-card">
-          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2024/07/ED_Award_Speech_Banner.jpg" alt="I Reject All Forms of Exceptionalism" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
+          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2024/07/ED_Award_Speech_Banner.jpg" alt="" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
           <div class="blog-card-body">
-            <p class="blog-card-tag">Geopolitics</p>
-            <a href="https://www.emmanueldaniel.com/i-reject-all-forms-of-exceptionalism/" target="_blank" rel="noopener" class="blog-card-title">I Reject All Forms of Exceptionalism</a>
+            <p class="blog-card-tag"><span data-show-en>Geopolitics</span><span data-show-zh style="display:none">地缘政治</span></p>
+            <a href="https://www.emmanueldaniel.com/i-reject-all-forms-of-exceptionalism/" target="_blank" rel="noopener" class="blog-card-title"><span data-show-en>I Reject All Forms of Exceptionalism</span><span data-show-zh style="display:none">我拒绝一切形式的例外主义</span></a>
             <p class="blog-card-date">February 4, 2026</p>
           </div>
         </div>
         <div class="blog-card">
-          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2024/07/John-Gong-ft-Ed-Launching-discussion-No-Title.jpg" alt="On the future of multilateralism and China" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
+          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2024/07/John-Gong-ft-Ed-Launching-discussion-No-Title.jpg" alt="" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
           <div class="blog-card-body">
-            <p class="blog-card-tag">Geopolitics</p>
-            <a href="https://www.emmanueldaniel.com/on-the-future-of-multilateralism-and-guessing-chinas-15th-five-year-plan/" target="_blank" rel="noopener" class="blog-card-title">On the Future of Multilateralism and Guessing China's 15th Five Year Plan</a>
+            <p class="blog-card-tag"><span data-show-en>Geopolitics</span><span data-show-zh style="display:none">地缘政治</span></p>
+            <a href="https://www.emmanueldaniel.com/on-the-future-of-multilateralism-and-guessing-chinas-15th-five-year-plan/" target="_blank" rel="noopener" class="blog-card-title"><span data-show-en>On the Future of Multilateralism and China's 15th Five Year Plan</span><span data-show-zh style="display:none">多边主义的未来与中国第十五个五年计划</span></a>
             <p class="blog-card-date">October 13, 2025</p>
           </div>
         </div>
         <div class="blog-card">
-          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2025/12/image-3.png" alt="DeepSeek Open Source breakthrough from China" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
+          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2025/12/image-3.png" alt="" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
           <div class="blog-card-body">
-            <p class="blog-card-tag">Geopolitics</p>
-            <a href="https://www.emmanueldaniel.com/deepseeks-open-source-breakthrough-from-inside-china/" target="_blank" rel="noopener" class="blog-card-title">DeepSeek's "Open Source" Breakthrough from Inside China</a>
+            <p class="blog-card-tag"><span data-show-en>Geopolitics</span><span data-show-zh style="display:none">地缘政治</span></p>
+            <a href="https://www.emmanueldaniel.com/deepseeks-open-source-breakthrough-from-inside-china/" target="_blank" rel="noopener" class="blog-card-title"><span data-show-en>DeepSeek's "Open Source" Breakthrough from Inside China</span><span data-show-zh style="display:none">DeepSeek在中国内部的「开源」突破</span></a>
             <p class="blog-card-date">February 11, 2025</p>
           </div>
         </div>
       </div>
 
-      <div class="blog-panel" id="finance">
+      <div class="blog-panel" id="fin">
         <div class="blog-card">
-          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2025/12/image-3.png" alt="Financial markets hijacked the networked economy" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
+          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2025/12/image-3.png" alt="" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
           <div class="blog-card-body">
-            <p class="blog-card-tag">Future of Finance</p>
-            <a href="https://www.emmanueldaniel.com/2025-was-when-the-financial-markets-hijacked-the-networked-economy/" target="_blank" rel="noopener" class="blog-card-title">2025 Was When the Financial Markets Hijacked the Networked Economy</a>
+            <p class="blog-card-tag"><span data-show-en>Future of Finance</span><span data-show-zh style="display:none">金融未来</span></p>
+            <a href="https://www.emmanueldaniel.com/2025-was-when-the-financial-markets-hijacked-the-networked-economy/" target="_blank" rel="noopener" class="blog-card-title"><span data-show-en>2025 Was When the Financial Markets Hijacked the Networked Economy</span><span data-show-zh style="display:none">2025年：金融市场劫持网络经济之年</span></a>
             <p class="blog-card-date">December 26, 2025</p>
           </div>
         </div>
         <div class="blog-card">
-          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2024/04/ImportedPhoto.733999378.983161.png" alt="US move from physical to digital dollars" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
+          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2024/04/ImportedPhoto.733999378.983161.png" alt="" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
           <div class="blog-card-body">
-            <p class="blog-card-tag">Future of Finance</p>
-            <a href="https://www.emmanueldaniel.com/who-better-to-ask-if-the-u-s-will-move-from-physical-to-digital-dollars/" target="_blank" rel="noopener" class="blog-card-title">Who Better to Ask If the U.S. Will Move from Physical to Digital Dollars?</a>
+            <p class="blog-card-tag"><span data-show-en>Future of Finance</span><span data-show-zh style="display:none">金融未来</span></p>
+            <a href="https://www.emmanueldaniel.com/who-better-to-ask-if-the-u-s-will-move-from-physical-to-digital-dollars/" target="_blank" rel="noopener" class="blog-card-title"><span data-show-en>Who Better to Ask If the U.S. Will Move from Physical to Digital Dollars?</span><span data-show-zh style="display:none">谁更有资格探讨美国是否会从实物美元转向数字美元？</span></a>
             <p class="blog-card-date">May 26, 2025</p>
           </div>
         </div>
         <div class="blog-card">
-          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2023/11/ED-SVIT-Book-Launch_Thumbnail_01_No-title-1024x576.jpg" alt="Digital assets financial architecture" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
+          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2023/11/ED-SVIT-Book-Launch_Thumbnail_01_No-title-1024x576.jpg" alt="" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
           <div class="blog-card-body">
-            <p class="blog-card-tag">Future of Finance</p>
-            <a href="https://www.emmanueldaniel.com/digital-assets-must-be-part-of-financial-architecture/" target="_blank" rel="noopener" class="blog-card-title">Digital Assets Must Be Part of Financial Architecture</a>
+            <p class="blog-card-tag"><span data-show-en>Future of Finance</span><span data-show-zh style="display:none">金融未来</span></p>
+            <a href="https://www.emmanueldaniel.com/digital-assets-must-be-part-of-financial-architecture/" target="_blank" rel="noopener" class="blog-card-title"><span data-show-en>Digital Assets Must Be Part of Financial Architecture</span><span data-show-zh style="display:none">数字资产必须成为金融架构的组成部分</span></a>
             <p class="blog-card-date">January 13, 2025</p>
           </div>
         </div>
       </div>
 
-      <div class="blog-panel" id="travel">
+      <div class="blog-panel" id="trv">
         <div class="blog-card">
-          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2024/07/ED_Award_Speech_Banner.jpg" alt="Advanced nursing skills in destitute countries" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
+          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2024/07/ED_Award_Speech_Banner.jpg" alt="" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
           <div class="blog-card-body">
-            <p class="blog-card-tag">Traveller's Tales</p>
-            <a href="https://www.emmanueldaniel.com/even-destitute-countries-need-advanced-nursing-skills/" target="_blank" rel="noopener" class="blog-card-title">Even Destitute Countries Need Advanced Nursing Skills</a>
+            <p class="blog-card-tag"><span data-show-en>Traveller's Tales</span><span data-show-zh style="display:none">旅行故事</span></p>
+            <a href="https://www.emmanueldaniel.com/even-destitute-countries-need-advanced-nursing-skills/" target="_blank" rel="noopener" class="blog-card-title"><span data-show-en>Even Destitute Countries Need Advanced Nursing Skills</span><span data-show-zh style="display:none">即便是贫困国家也需要先进的护理技能</span></a>
             <p class="blog-card-date">July 16, 2025</p>
           </div>
         </div>
         <div class="blog-card">
-          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2023/07/EDs-Thumbnail_03.jpg" alt="Washington cherries farm to store" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
+          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2023/07/EDs-Thumbnail_03.jpg" alt="" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
           <div class="blog-card-body">
-            <p class="blog-card-tag">Traveller's Tales</p>
-            <a href="https://www.emmanueldaniel.com/cherries-from-the-farms-in-washington-state-to-my-plate/" target="_blank" rel="noopener" class="blog-card-title">Washington Cherries from Farm to Store in 72 Hours</a>
+            <p class="blog-card-tag"><span data-show-en>Traveller's Tales</span><span data-show-zh style="display:none">旅行故事</span></p>
+            <a href="https://www.emmanueldaniel.com/cherries-from-the-farms-in-washington-state-to-my-plate/" target="_blank" rel="noopener" class="blog-card-title"><span data-show-en>Washington Cherries from Farm to Store in 72 Hours</span><span data-show-zh style="display:none">华盛顿州樱桃：72小时从农场到餐桌</span></a>
             <p class="blog-card-date">December 28, 2024</p>
           </div>
         </div>
         <div class="blog-card">
-          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2023/07/ED-x-Redefining-Society-01.png" alt="Conversation in St Lucia on Caribbean talent" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
+          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2023/07/ED-x-Redefining-Society-01.png" alt="" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
           <div class="blog-card-body">
-            <p class="blog-card-tag">Traveller's Tales</p>
-            <a href="https://www.emmanueldaniel.com/a-memorable-conversation-in-st-lucia-on-talent-in-the-caribbean/" target="_blank" rel="noopener" class="blog-card-title">A Conversation in St Lucia on the People and Talent in the Caribbean</a>
+            <p class="blog-card-tag"><span data-show-en>Traveller's Tales</span><span data-show-zh style="display:none">旅行故事</span></p>
+            <a href="https://www.emmanueldaniel.com/a-memorable-conversation-in-st-lucia-on-talent-in-the-caribbean/" target="_blank" rel="noopener" class="blog-card-title"><span data-show-en>A Conversation in St Lucia on the People and Talent in the Caribbean</span><span data-show-zh style="display:none">在圣卢西亚关于加勒比地区人才的一次对话</span></a>
             <p class="blog-card-date">December 16, 2024</p>
           </div>
         </div>
       </div>
 
-      <div class="blog-panel" id="reviews">
+      <div class="blog-panel" id="rev">
         <div class="blog-card">
-          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2023/05/EmmanuelDaniel6-850x550-1.png" alt="Crazy Rich Asians review" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
+          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2023/05/EmmanuelDaniel6-850x550-1.png" alt="" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
           <div class="blog-card-body">
-            <p class="blog-card-tag">Reviews</p>
-            <a href="https://www.emmanueldaniel.com/crazy-rich-asians/" target="_blank" rel="noopener" class="blog-card-title">Crazy Rich Asians</a>
+            <p class="blog-card-tag"><span data-show-en>Reviews</span><span data-show-zh style="display:none">书评</span></p>
+            <a href="https://www.emmanueldaniel.com/crazy-rich-asians/" target="_blank" rel="noopener" class="blog-card-title"><span data-show-en>Crazy Rich Asians</span><span data-show-zh style="display:none">《摘金奇缘》</span></a>
             <p class="blog-card-date">August 29, 2018</p>
           </div>
         </div>
         <div class="blog-card">
-          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2023/05/ED-x-BreakingBanks-01.png" alt="The King Never Smiles book review" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
+          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2023/05/ED-x-BreakingBanks-01.png" alt="" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
           <div class="blog-card-body">
-            <p class="blog-card-tag">Reviews</p>
-            <a href="https://www.emmanueldaniel.com/the-king-never-smiles-paul-m-handley/" target="_blank" rel="noopener" class="blog-card-title">The King Never Smiles — Paul M. Handley</a>
+            <p class="blog-card-tag"><span data-show-en>Reviews</span><span data-show-zh style="display:none">书评</span></p>
+            <a href="https://www.emmanueldaniel.com/the-king-never-smiles-paul-m-handley/" target="_blank" rel="noopener" class="blog-card-title"><span data-show-en>The King Never Smiles — Paul M. Handley</span><span data-show-zh style="display:none">《国王从不微笑》——保罗·汉德利著</span></a>
             <p class="blog-card-date">August 6, 2007</p>
           </div>
         </div>
         <div class="blog-card">
-          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2023/04/IMG_1115-1-1024x683.jpg" alt="Great reference book on banking" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
+          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2023/04/IMG_1115-1-1024x683.jpg" alt="" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
           <div class="blog-card-body">
-            <p class="blog-card-tag">Reviews</p>
-            <a href="https://www.emmanueldaniel.com/finally-a-great-reference-book-on-banking/" target="_blank" rel="noopener" class="blog-card-title">Finally, a Great Reference Book on Banking!</a>
+            <p class="blog-card-tag"><span data-show-en>Reviews</span><span data-show-zh style="display:none">书评</span></p>
+            <a href="https://www.emmanueldaniel.com/finally-a-great-reference-book-on-banking/" target="_blank" rel="noopener" class="blog-card-title"><span data-show-en>Finally, a Great Reference Book on Banking!</span><span data-show-zh style="display:none">终于，一本出色的银行业参考书！</span></a>
             <p class="blog-card-date">December 27, 2006</p>
           </div>
         </div>
       </div>
 
-      <div class="blog-panel" id="footnotes">
+      <div class="blog-panel" id="fn">
         <div class="blog-card">
-          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2022/11/Barney-Frank-2.png" alt="Russia Ukraine war transformational changes in finance" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
+          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2022/11/Barney-Frank-2.png" alt="" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
           <div class="blog-card-body">
-            <p class="blog-card-tag">Footnotes</p>
-            <a href="https://www.emmanueldaniel.com/russian-ukraine-war-will-trigger-transformational-changes-in-finance-industry/" target="_blank" rel="noopener" class="blog-card-title">Russian-Ukraine War Will Trigger Transformational Changes in Finance Industry</a>
+            <p class="blog-card-tag"><span data-show-en>Footnotes</span><span data-show-zh style="display:none">注脚</span></p>
+            <a href="https://www.emmanueldaniel.com/russian-ukraine-war-will-trigger-transformational-changes-in-finance-industry/" target="_blank" rel="noopener" class="blog-card-title"><span data-show-en>Russian-Ukraine War Will Trigger Transformational Changes in Finance Industry</span><span data-show-zh style="display:none">俄乌战争将引发金融业的变革性变化</span></a>
             <p class="blog-card-date">April 14, 2022</p>
           </div>
         </div>
         <div class="blog-card">
-          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2022/12/Full-Video-1_Thumbnail.jpg" alt="Creating a digital finance roadmap" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
+          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2022/12/Full-Video-1_Thumbnail.jpg" alt="" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
           <div class="blog-card-body">
-            <p class="blog-card-tag">Footnotes</p>
-            <a href="https://www.emmanueldaniel.com/creating-a-digital-finance-roadmap/" target="_blank" rel="noopener" class="blog-card-title">Creating a Digital Finance Roadmap</a>
+            <p class="blog-card-tag"><span data-show-en>Footnotes</span><span data-show-zh style="display:none">注脚</span></p>
+            <a href="https://www.emmanueldaniel.com/creating-a-digital-finance-roadmap/" target="_blank" rel="noopener" class="blog-card-title"><span data-show-en>Creating a Digital Finance Roadmap</span><span data-show-zh style="display:none">制定数字金融路线图</span></a>
             <p class="blog-card-date">October 27, 2021</p>
           </div>
         </div>
         <div class="blog-card">
-          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2024/02/EDBlog-speaker-05-1-1.png" alt="Emmanuel Daniel — An Introduction" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
+          <div class="blog-card-img"><img src="https://www.emmanueldaniel.com/wp-content/uploads/2024/02/EDBlog-speaker-05-1-1.png" alt="" loading="lazy" onerror="this.parentElement.style.background='var(--bg-grey)';this.style.display='none'"></div>
           <div class="blog-card-body">
-            <p class="blog-card-tag">Footnotes</p>
-            <a href="https://www.emmanueldaniel.com/an-introduction-my-first-post/" target="_blank" rel="noopener" class="blog-card-title">An Introduction — My First Post</a>
+            <p class="blog-card-tag"><span data-show-en>Footnotes</span><span data-show-zh style="display:none">注脚</span></p>
+            <a href="https://www.emmanueldaniel.com/an-introduction-my-first-post/" target="_blank" rel="noopener" class="blog-card-title"><span data-show-en>An Introduction — My First Post</span><span data-show-zh style="display:none">一篇引言——我的第一篇文章</span></a>
             <p class="blog-card-date">February 24, 2006</p>
           </div>
         </div>
       </div>
     </div>
-
     <div style="text-align:center;margin-top:2.5rem;">
-      <a href="https://www.emmanueldaniel.com/" target="_blank" rel="noopener" class="btn-secondary">View All Articles →</a>
+      <a href="https://www.emmanueldaniel.com/" target="_blank" rel="noopener" class="btn-secondary">
+        <span data-show-en>View All Articles →</span><span data-show-zh style="display:none">查看全部文章 →</span>
+      </a>
     </div>
   </div>
-
 </section>
-
 
 <div class="section-divider"></div>
 
-<!-- ── ABOUT AUTHOR ── -->
+<!-- ══════════════════════════════════════════════════════
+     ABOUT AUTHOR
+══════════════════════════════════════════════════════ -->
 <section class="section bg-deep" id="about">
   <div class="container">
     <div class="author-grid">
@@ -740,35 +797,40 @@
         </div>
       </div>
       <div>
-        <div class="section-eyebrow">About the Author</div>
+        <div class="section-eyebrow">
+          <span data-show-en>About the Author</span><span data-show-zh style="display:none">作者简介</span>
+        </div>
         <h2 class="section-heading">Emmanuel Daniel</h2>
         <div style="margin-bottom:0.75rem;">
-          <span class="author-tag">Author</span>
-          <span class="author-tag">Entrepreneur</span>
-          <span class="author-tag">Futurist</span>
+          <span class="author-tag"><span data-show-en>Author</span><span data-show-zh style="display:none">作者</span></span>
+          <span class="author-tag"><span data-show-en>Entrepreneur</span><span data-show-zh style="display:none">企业家</span></span>
+          <span class="author-tag"><span data-show-en>Futurist</span><span data-show-zh style="display:none">未来学家</span></span>
           <span class="author-tag">Fintech Power 50</span>
         </div>
         <p class="author-bio">
-          Emmanuel Daniel is an author, entrepreneur and corporate strategist — a global thought leader on the future of finance and its impact on business and society. He was listed as a <strong style="color:var(--ink)">top 10 global fintech influencer</strong> in the Fintech Power 50 list for 2021 and 2022.
+          <span data-show-en>Emmanuel Daniel is an author, entrepreneur and corporate strategist — a global thought leader on the future of finance and its impact on business and society. He was listed as a <strong style="color:var(--ink)">top 10 global fintech influencer</strong> in the Fintech Power 50 list for 2021 and 2022.</span>
+          <span data-show-zh style="display:none">艾曼纽·丹尼尔是一位作家、企业家和企业战略家——金融未来及其对商业与社会影响领域的全球思想领袖。他被列入2021年和2022年Fintech Power 50 <strong style="color:var(--ink)">全球金融科技十大影响力人物</strong>榜单。</span>
         </p>
         <p class="author-bio">
-          In 1996, Emmanuel founded <strong style="color:var(--ink)">TAB Global</strong>, the research, publication and consulting house behind The Asian Banker, Wealth and Society, The Banking Academy and TAB Insights — giving him extensive contact with banking and finance leaders across the world.
+          <span data-show-en>In 1996, Emmanuel founded <strong style="color:var(--ink)">TAB Global</strong>, the research, publication and consulting house behind The Asian Banker, Wealth and Society, The Banking Academy and TAB Insights — giving him extensive contact with banking and finance leaders across the world.</span>
+          <span data-show-zh style="display:none">1996年，艾曼纽创立了<strong style="color:var(--ink)">TAB Global</strong>，这是亚洲银行家、财富与社会、银行学院以及TAB Insights背后的研究、出版与咨询机构——使他与全球银行和金融领域领袖建立了广泛联系。</span>
         </p>
         <p class="author-bio">
-          Trained as a lawyer with degrees from the National University of Singapore and the University of London, Emmanuel has visited more than 110 countries and divides his time between Singapore, Beijing and New York. He has been featured on <strong style="color:var(--ink)">BBC, CNBC and Bloomberg</strong>.
+          <span data-show-en>Trained as a lawyer with degrees from the National University of Singapore and the University of London, Emmanuel has visited more than 110 countries and divides his time between Singapore, Beijing and New York. He has been featured on <strong style="color:var(--ink)">BBC, CNBC and Bloomberg</strong>.</span>
+          <span data-show-zh style="display:none">艾曼纽接受过法律专业培训，持有新加坡国立大学和伦敦大学学位，走访过110多个国家，往返于新加坡、北京和纽约之间。他曾出现在<strong style="color:var(--ink)">BBC、CNBC和彭博社</strong>的报道中。</span>
         </p>
         <div class="author-creds">
           <div class="cred-item">
             <span class="cred-num">110+</span>
-            <span class="cred-text">Countries visited and studied</span>
+            <span class="cred-text"><span data-show-en>Countries visited and studied</span><span data-show-zh style="display:none">已走访并研究的国家</span></span>
           </div>
           <div class="cred-item">
             <span class="cred-num">30+</span>
-            <span class="cred-text">Years in finance research</span>
+            <span class="cred-text"><span data-show-en>Years in finance research</span><span data-show-zh style="display:none">金融研究年限</span></span>
           </div>
           <div class="cred-item">
             <span class="cred-num">Top 10</span>
-            <span class="cred-text">Fintech Power 50 influencer</span>
+            <span class="cred-text"><span data-show-en>Fintech Power 50 influencer</span><span data-show-zh style="display:none">Fintech Power 50影响力人物</span></span>
           </div>
         </div>
       </div>
@@ -778,125 +840,233 @@
 
 <div class="section-divider"></div>
 
-<!-- ── MY OTHER BOOK ── -->
+<!-- ══════════════════════════════════════════════════════
+     MY OTHER BOOK
+══════════════════════════════════════════════════════ -->
 <section class="section bg-black" id="other-book">
   <div class="container">
-    <div class="section-eyebrow">Also by Emmanuel Daniel</div>
-    <h2 class="section-heading">My Other Book</h2>
-
+    <div class="section-eyebrow">
+      <span data-show-en>Also by Emmanuel Daniel</span><span data-show-zh style="display:none">艾曼纽·丹尼尔的另一本著作</span>
+    </div>
+    <h2 class="section-heading">
+      <span data-show-en>My Other Book</span><span data-show-zh style="display:none">我的另一本书</span>
+    </h2>
     <div class="other-book-grid">
-
-      <!-- Thumbnail / cover -->
       <div class="other-book-cover-wrap">
-        <a href="https://www.emmanueldaniel.com/the-great-transition/" target="_blank" rel="noopener" class="other-book-cover-link" aria-label="Visit The Great Transition book page">
-          <img
-            src="https://www.emmanueldaniel.com/wp-content/uploads/2022/07/main-banner-book.png"
-            alt="The Great Transition: The Personalization of Finance is Here — Emmanuel Daniel"
-            class="other-book-cover-img"
-            loading="lazy"
-            onerror="this.style.display='none';this.parentElement.parentElement.querySelector('.other-book-cover-fallback').style.display='flex'">
+        <a href="https://www.emmanueldaniel.com/the-great-transition/" target="_blank" rel="noopener" class="other-book-cover-link">
+          <img src="https://www.emmanueldaniel.com/wp-content/uploads/2022/07/main-banner-book.png"
+               alt="The Great Transition: The Personalization of Finance is Here"
+               class="other-book-cover-img" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.parentElement.querySelector('.other-book-cover-fallback').style.display='flex'">
           <div class="other-book-cover-fallback" style="display:none;">
             <div class="other-book-cover-text">
-              <span class="other-book-cover-title">The Great<br>Transition</span>
-              <span class="other-book-cover-sub">The Personalization<br>of Finance is Here</span>
+              <span class="other-book-cover-title"><span data-show-en>The Great Transition</span><span data-show-zh style="display:none">大转型</span></span>
+              <span class="other-book-cover-sub"><span data-show-en>The Personalization of Finance is Here</span><span data-show-zh style="display:none">金融个性化时代已来临</span></span>
               <span class="other-book-cover-author">Emmanuel Daniel</span>
             </div>
           </div>
           <div class="other-book-cover-overlay">
-            <span class="other-book-cover-cta">View Book →</span>
+            <span class="other-book-cover-cta"><span data-show-en>View Book →</span><span data-show-zh style="display:none">查看详情 →</span></span>
           </div>
         </a>
       </div>
-
-      <!-- Content -->
       <div class="other-book-content">
-        <div class="other-book-badge">Published 2022 · World Scientific</div>
-        <h3 class="other-book-title">The Great Transition</h3>
-        <p class="other-book-subtitle">The Personalization of Finance is Here</p>
-
-        <p class="other-book-desc">
-          This book outlines the transition that the finance industry will go through from its platform stage today into what Emmanuel Daniel calls the <em>"Personalization of Finance"</em>. He uses the story of the ice trade to describe a level of personalization never seen before — a profound transformation in how institutions, markets, and societies will need to function in the network age.
-        </p>
-
-        <blockquote class="other-book-quote">
-          "He introduces the term 'financialization of everything' to describe how digitization will transform entire economies, enhance their receptivity towards cryptocurrencies and blockchain, and how new trends such as gaming will shape the personalization of society."
-        </blockquote>
-
-        <p class="other-book-audience">Especially useful for <strong>founders, disruptors and policy makers</strong> in finance looking for original ideas on finance, economics, and society shaping the industry today.</p>
-
-        <div class="other-book-themes">
-          <span class="other-book-theme">From platforms to personalisation</span>
-          <span class="other-book-theme">Financialisation of everything</span>
-          <span class="other-book-theme">Mass amateurisation of finance</span>
-          <span class="other-book-theme">The institution crumbles</span>
-          <span class="other-book-theme">Rise of the rebels</span>
-          <span class="other-book-theme">Anatomy of innovation</span>
+        <div class="other-book-badge">
+          <span data-show-en>Published 2022 · World Scientific</span><span data-show-zh style="display:none">2022年出版 · 世界科学出版社</span>
         </div>
-
+        <h3 class="other-book-title">
+          <span data-show-en>The Great Transition</span><span data-show-zh style="display:none">大转型</span>
+        </h3>
+        <p class="other-book-subtitle">
+          <span data-show-en>The Personalization of Finance is Here</span><span data-show-zh style="display:none">金融个性化时代已来临</span>
+        </p>
+        <p class="other-book-desc">
+          <span data-show-en>This book outlines the transition that the finance industry will go through from its platform stage today into what Emmanuel Daniel calls the <em>"Personalization of Finance"</em>. He uses the story of the ice trade to describe a level of personalization never seen before — a profound transformation in how institutions, markets, and societies will need to function in the network age.</span>
+          <span data-show-zh style="display:none">本书阐述了金融行业将从当今的平台阶段过渡到艾曼纽·丹尼尔所称<em>「金融个性化」</em>阶段的历程。他借助冰块贸易的故事，描述了一种前所未有的个性化程度——一场机构、市场与社会在网络时代运作方式上的深刻变革。</span>
+        </p>
+        <blockquote class="other-book-quote">
+          <span data-show-en>"He introduces the term 'financialization of everything' to describe how digitization will transform entire economies, enhance their receptivity towards cryptocurrencies and blockchain, and how new trends such as gaming will shape the personalization of society."</span>
+          <span data-show-zh style="display:none">「他提出'万物金融化'这一概念，描述数字化将如何改变整个经济体系、增强其对加密货币和区块链的接受度，以及游戏等新趋势将如何塑造社会的个性化。」</span>
+        </blockquote>
+        <p class="other-book-audience">
+          <span data-show-en>Especially useful for <strong>founders, disruptors and policy makers</strong> in finance looking for original ideas on finance, economics, and society shaping the industry today.</span>
+          <span data-show-zh style="display:none">特别适合金融领域的<strong>创业者、颠覆者和政策制定者</strong>，为寻求关于金融、经济学及当今行业塑造力的原创思想者量身打造。</span>
+        </p>
+        <div class="other-book-themes">
+          <span class="other-book-theme"><span data-show-en>From platforms to personalisation</span><span data-show-zh style="display:none">从平台到个性化</span></span>
+          <span class="other-book-theme"><span data-show-en>Financialisation of everything</span><span data-show-zh style="display:none">万物金融化</span></span>
+          <span class="other-book-theme"><span data-show-en>Mass amateurisation of finance</span><span data-show-zh style="display:none">金融大众化</span></span>
+          <span class="other-book-theme"><span data-show-en>The institution crumbles</span><span data-show-zh style="display:none">机构的瓦解</span></span>
+          <span class="other-book-theme"><span data-show-en>Rise of the rebels</span><span data-show-zh style="display:none">反叛者的崛起</span></span>
+          <span class="other-book-theme"><span data-show-en>Anatomy of innovation</span><span data-show-zh style="display:none">创新解剖</span></span>
+        </div>
         <div class="other-book-retailers">
           <a href="https://www.amazon.co.uk/Great-Transition-Personalization-Finance-Here/dp/9811265623/" target="_blank" rel="noopener" class="other-book-btn">Amazon UK</a>
           <a href="https://www.worldscientific.com/worldscibooks/10.1142/13113#t=aboutBook" target="_blank" rel="noopener" class="other-book-btn">World Scientific</a>
           <a href="https://www.barnesandnoble.com/w/great-transition-the-emmanuel-daniel/1141966068?ean=9789811265624" target="_blank" rel="noopener" class="other-book-btn">Barnes &amp; Noble</a>
           <a href="https://www.waterstones.com/book/the-great-transition/emmanuel-daniel/9789811265624" target="_blank" rel="noopener" class="other-book-btn">Waterstones</a>
           <a href="https://play.google.com/store/books/details?id=bXSSEAAAQBAJ" target="_blank" rel="noopener" class="other-book-btn">Google Books</a>
-          <a href="https://www.emmanueldaniel.com/the-great-transition/" target="_blank" rel="noopener" class="other-book-btn other-book-btn-primary">Learn More →</a>
+          <a href="https://www.emmanueldaniel.com/the-great-transition/" target="_blank" rel="noopener" class="other-book-btn other-book-btn-primary">
+            <span data-show-en>Learn More →</span><span data-show-zh style="display:none">了解更多 →</span>
+          </a>
         </div>
       </div>
-
     </div>
   </div>
 </section>
+
 <div class="section-divider"></div>
 
-<!-- ── NEWSLETTER ── -->
+<!-- ══════════════════════════════════════════════════════
+     NEWSLETTER
+══════════════════════════════════════════════════════ -->
 <section class="section newsletter-section" id="newsletter">
   <div class="container">
     <div class="newsletter-inner">
-      <div class="section-eyebrow">Stay Updated</div>
-      <h2 class="section-heading">Newsletter</h2>
-      <p class="section-lead" style="margin:0 auto;text-align:center;">Get Emmanuel's latest thinking on AI in banking, geopolitics, and the future of finance — delivered directly to your inbox.</p>
+      <div class="section-eyebrow">
+        <span data-show-en>Stay Updated</span><span data-show-zh style="display:none">保持关注</span>
+      </div>
+      <h2 class="section-heading">
+        <span data-show-en>Newsletter</span><span data-show-zh style="display:none">电子报</span>
+      </h2>
+      <p class="section-lead" style="margin:0 auto;text-align:center;">
+        <span data-show-en>Get Emmanuel's latest thinking on AI in banking, geopolitics, and the future of finance — delivered directly to your inbox.</span>
+        <span data-show-zh style="display:none">订阅艾曼纽关于银行业人工智能、地缘政治与金融未来的最新思考——直接发送至您的收件箱。</span>
+      </p>
       <form class="newsletter-form" onsubmit="handleNewsletter(event)">
-        <input type="email" class="nl-input" placeholder="your@email.com" required aria-label="Email for newsletter">
-        <button type="submit" class="nl-submit">Subscribe →</button>
+        <input type="email" class="nl-input" id="nl-email" placeholder="your@email.com" required aria-label="Email">
+        <button type="submit" class="nl-submit">
+          <span data-show-en>Subscribe →</span><span data-show-zh style="display:none">订阅 →</span>
+        </button>
       </form>
-      <p class="nl-note" id="nl-msg">No spam. Unsubscribe any time.</p>
+      <p class="nl-note" id="nl-msg">
+        <span data-show-en>No spam. Unsubscribe any time.</span><span data-show-zh style="display:none">无垃圾邮件，随时退订。</span>
+      </p>
       <div class="nl-features">
-        <span class="nl-feat">AI &amp; Banking Insights</span>
-        <span class="nl-feat">Geopolitical Analysis</span>
-        <span class="nl-feat">Book Updates &amp; Events</span>
-        <span class="nl-feat">Exclusive Excerpts</span>
+        <span class="nl-feat"><span data-show-en>AI &amp; Banking Insights</span><span data-show-zh style="display:none">人工智能与银行业洞察</span></span>
+        <span class="nl-feat"><span data-show-en>Geopolitical Analysis</span><span data-show-zh style="display:none">地缘政治分析</span></span>
+        <span class="nl-feat"><span data-show-en>Book Updates &amp; Events</span><span data-show-zh style="display:none">新书动态与活动</span></span>
+        <span class="nl-feat"><span data-show-en>Exclusive Excerpts</span><span data-show-zh style="display:none">独家书摘</span></span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
+<!-- ══════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════ -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">Emmanuel <span>Daniel</span></div>
     <div class="footer-links">
-      <a href="https://www.emmanueldaniel.com/" target="_blank" rel="noopener">Home</a>
-      <a href="https://www.emmanueldaniel.com/biography-contact/" target="_blank" rel="noopener">Biography</a>
-      <a href="https://www.emmanueldaniel.com/videos/" target="_blank" rel="noopener">Videos</a>
-      <a href="https://thebankingacademy.com/" target="_blank" rel="noopener">Banking Academy</a>
+      <a href="https://www.emmanueldaniel.com/" target="_blank" rel="noopener"><span data-show-en>Home</span><span data-show-zh style="display:none">主页</span></a>
+      <a href="https://www.emmanueldaniel.com/biography-contact/" target="_blank" rel="noopener"><span data-show-en>Biography</span><span data-show-zh style="display:none">简介</span></a>
+      <a href="https://www.emmanueldaniel.com/videos/" target="_blank" rel="noopener"><span data-show-en>Videos</span><span data-show-zh style="display:none">视频</span></a>
+      <a href="https://thebankingacademy.com/" target="_blank" rel="noopener"><span data-show-en>Banking Academy</span><span data-show-zh style="display:none">银行学院</span></a>
       <a href="https://tab.global/" target="_blank" rel="noopener">TAB Global</a>
-      <a href="mailto:edaniel@tab.global">Contact</a>
+      <a href="mailto:edaniel@tab.global"><span data-show-en>Contact</span><span data-show-zh style="display:none">联系我们</span></a>
     </div>
-    <p class="footer-copy">© 2026 Emmanuel Daniel. All rights reserved.</p>
+    <p class="footer-copy">
+      <span data-show-en>© 2026 Emmanuel Daniel. All rights reserved.</span>
+      <span data-show-zh style="display:none">© 2026 艾曼纽·丹尼尔。保留所有权利。</span>
+    </p>
   </div>
 </footer>
 
-<!-- ── STICKY BUY + SHARE ── -->
+<!-- STICKY BUY -->
 <div class="sticky-buy" id="sticky">
   <div class="sticky-share">
     <a href="https://twitter.com/intent/tweet?text=Building+the+AI+Bank+by+Emmanuel+Daniel&url=https://www.emmanueldaniel.com/" target="_blank" rel="noopener" class="shr" title="Share on X">𝕏</a>
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.emmanueldaniel.com/&title=Building+the+AI+Bank" target="_blank" rel="noopener" class="shr" title="Share on LinkedIn">in</a>
-    <a href="https://api.whatsapp.com/send?text=Building+the+AI+Bank+by+Emmanuel+Daniel+https://www.emmanueldaniel.com/" target="_blank" rel="noopener" class="shr" title="Share on WhatsApp">W</a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.emmanueldaniel.com/" target="_blank" rel="noopener" class="shr" title="Share on LinkedIn">in</a>
+    <a href="https://api.whatsapp.com/send?text=Building+the+AI+Bank+by+Emmanuel+Daniel+https://www.emmanueldaniel.com/" target="_blank" rel="noopener" class="shr" title="WhatsApp">W</a>
   </div>
-  <a href="#buy" class="sticky-main">📖 Get the Book</a>
+  <a href="#buy" class="sticky-main">
+    <span data-show-en>📖 Get the Book</span><span data-show-zh style="display:none">📖 立即购书</span>
+  </a>
 </div>
 <a href="#" class="back-top" id="backtop" aria-label="Back to top">↑</a>
 
-<script src="main.js"></script>
+<!-- ══════════════════════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════════════════════ -->
+<script>
+// ── Language Switcher ──────────────────────────────────
+function setLang(lang) {
+  const isZh = lang === 'zh';
+
+  // Root attribute (drives CSS font switch)
+  document.documentElement.setAttribute('data-lang', lang);
+  document.documentElement.setAttribute('lang', isZh ? 'zh-Hans' : 'en');
+
+  // Toggle active button
+  document.getElementById('btn-en').classList.toggle('active', !isZh);
+  document.getElementById('btn-zh').classList.toggle('active',  isZh);
+
+  // Toggle all EN/ZH spans
+  document.querySelectorAll('[data-show-en]').forEach(el => {
+    el.style.display = isZh ? 'none' : '';
+  });
+  document.querySelectorAll('[data-show-zh]').forEach(el => {
+    el.style.display = isZh ? '' : 'none';
+  });
+
+  // Page title
+  document.title = isZh
+    ? '构建AI银行：速度、判断与权力 — 艾曼纽·丹尼尔'
+    : 'Building the AI Bank: Speed, Judgment and Power — Emmanuel Daniel';
+
+  // Newsletter placeholder
+  const inp = document.getElementById('nl-email');
+  if (inp) inp.placeholder = isZh ? '您的邮箱@example.com' : 'your@email.com';
+
+  // Persist choice
+  try { localStorage.setItem('aib-lang', lang); } catch(e) {}
+}
+
+// Restore saved preference on load
+(function() {
+  let saved = 'en';
+  try { saved = localStorage.getItem('aib-lang') || 'en'; } catch(e) {}
+  if (saved === 'zh') setLang('zh');
+})();
+
+// ── Navigation scroll ──────────────────────────────────
+const _nav    = document.getElementById('nav');
+const _sticky = document.getElementById('sticky');
+const _bt     = document.getElementById('backtop');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  _nav.classList.toggle('scrolled', y > 20);
+  _sticky.classList.toggle('vis', y > 600);
+  _bt.classList.toggle('vis', y > 600);
+}, { passive: true });
+
+// ── TOC tabs ───────────────────────────────────────────
+function switchToc(id, btn) {
+  document.querySelectorAll('.toc-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.toc-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(id).classList.add('active');
+}
+
+// ── Blog tabs ──────────────────────────────────────────
+function switchBlog(id, btn) {
+  document.querySelectorAll('.blog-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.blog-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(id).classList.add('active');
+}
+
+// ── Newsletter ─────────────────────────────────────────
+function handleNewsletter(e) {
+  e.preventDefault();
+  const isZh = document.documentElement.getAttribute('data-lang') === 'zh';
+  const msg  = document.getElementById('nl-msg');
+  // Clear old spans, set plain text
+  msg.textContent = isZh ? '✓ 订阅成功！欢迎加入。' : "✓ You're subscribed! Welcome aboard.";
+  msg.style.color = 'var(--ink)';
+  e.target.reset();
+}
+</script>
 </body>
 </html>
