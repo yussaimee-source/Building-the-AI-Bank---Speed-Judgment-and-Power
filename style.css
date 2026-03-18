@@ -434,22 +434,8 @@ nav.scrolled { border-bottom-color: var(--border-strong); box-shadow: 0 2px 20px
 .toc-row:hover .toc-row-arrow { color: var(--ink); transform: translateX(3px); }
 
 /* ── KEY IDEAS ── */
-.ideas-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-  margin-top: 3rem;
-}
-.idea-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.75rem;
-  transition: all 0.25s;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
+
+
 .idea-card::before {
   content: '';
   position: absolute;
@@ -458,30 +444,6 @@ nav.scrolled { border-bottom-color: var(--border-strong); box-shadow: 0 2px 20px
   background: linear-gradient(90deg, var(--ink), var(--ink-50));
   opacity: 0;
   transition: opacity 0.25s;
-}
-.idea-card:hover { border-color: var(--ink-30); background: var(--bg-warm); transform: translateY(-3px); }
-.idea-card:hover::before { opacity: 1; }
-.idea-icon { font-size: 1.75rem; margin-bottom: 0.75rem; display: block; }
-.idea-num {
-  position: absolute;
-  top: 1.25rem; right: 1.5rem;
-  font-family: var(--font-display);
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: rgba(0,0,0,0.06);
-}
-.idea-title {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--ink);
-  margin-bottom: 0.6rem;
-  line-height: 1.25;
-}
-.idea-body {
-  font-size: 0.95rem;
-  color: var(--ink-50);
-  line-height: 1.65;
 }
 
 /* ── REVIEWS ── */
@@ -832,7 +794,7 @@ footer {
   .hero-right { padding: 2rem; min-height: 360px; }
   .hero-stats { bottom: 1rem; right: 1rem; }
   .author-grid { grid-template-columns: 1fr; }
-  .ideas-grid { grid-template-columns: repeat(2, 1fr); }
+  
   .reviews-grid { grid-template-columns: 1fr; gap: 1px; }
   .who-grid { grid-template-columns: 1fr; }
   .retailers-grid { grid-template-columns: repeat(2, 1fr); }
@@ -843,7 +805,7 @@ footer {
 }
 
 @media (max-width: 600px) {
-  .ideas-grid { grid-template-columns: 1fr; }
+  
   .retailers-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-stats { display: none; }
 }
@@ -1060,159 +1022,6 @@ footer {
   }
 }
 
-/* ── KEY IDEAS — with thumbnails ── */
-.idea-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  transition: all 0.25s;
-  cursor: default;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-.idea-thumb {
-  width: 100%;
-  aspect-ratio: 16/9;
-  overflow: hidden;
-  background: var(--bg-grey);
-  flex-shrink: 0;
-}
-.idea-thumb img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-  filter: grayscale(20%);
-}
-.idea-card:hover .idea-thumb img {
-  transform: scale(1.05);
-  filter: grayscale(0%);
-}
-.idea-card:hover {
-  border-color: var(--border-strong);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.1);
-}
-.idea-card:hover::before { opacity: 1; }
-.idea-num {
-  position: absolute;
-  top: calc(56.25% + 0.75rem);
-  right: 1.25rem;
-  font-family: var(--font-display);
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: rgba(0,0,0,0.12);
-  line-height: 1;
-}
-.idea-icon { display: none; } /* hide old emoji icons */
-.idea-title {
-  font-family: var(--font-display);
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--ink);
-  margin: 0.9rem 1.25rem 0.4rem;
-  line-height: 1.25;
-}
-.idea-body {
-  font-size: 0.88rem;
-  color: var(--ink-50);
-  line-height: 1.65;
-  padding: 0 1.25rem 1.25rem;
-  flex: 1;
-}
-
-/* ── REVIEWS — featured with photos ── */
-.reviews-featured-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-top: 2.5rem;
-}
-.review-featured-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: box-shadow 0.25s, transform 0.25s;
-}
-.review-featured-card:hover {
-  box-shadow: 0 12px 32px rgba(0,0,0,0.09);
-  transform: translateY(-3px);
-}
-.review-featured-photo {
-  width: 100%;
-  aspect-ratio: 16/7;
-  background: var(--bg-grey);
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.review-featured-photo img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-  filter: grayscale(15%);
-  transition: filter 0.3s;
-}
-.review-featured-photo.no-photo {
-  aspect-ratio: 1/1;
-  max-height: 80px;
-}
-.review-featured-card:hover .review-featured-photo img { filter: grayscale(0%); }
-.review-featured-body {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  flex: 1;
-}
-.review-featured-body .review-stars {
-  color: var(--ink-30);
-  font-size: 0.82rem;
-  letter-spacing: 3px;
-  margin-bottom: 0;
-}
-.review-featured-body .review-quote {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-style: italic;
-  color: var(--ink-70);
-  line-height: 1.8;
-  flex: 1;
-}
-.review-featured-body .review-quote::before {
-  content: '\201C';
-  font-family: var(--font-display);
-  font-size: 2.5rem;
-  color: var(--ink-10);
-  opacity: 1;
-  line-height: 0;
-  vertical-align: -0.4em;
-  margin-right: 0.15em;
-}
-.review-featured-body .review-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  padding-top: 0.75rem;
-  border-top: 1px solid var(--border);
-}
-.review-featured-body .review-name {
-  font-family: var(--font-display);
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--ink);
-}
-.review-featured-body .review-role {
-  font-size: 0.82rem;
-  color: var(--ink-30);
-  line-height: 1.4;
-}
-
 /* ── BUY SECTION — logo grid ── */
 .retailers-logo-grid {
   display: grid;
@@ -1268,9 +1077,190 @@ footer {
 }
 
 @media (max-width: 960px) {
-  .reviews-featured-grid { grid-template-columns: 1fr; }
+  
   .retailers-logo-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 600px) {
   .retailers-logo-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+
+/* ══════════════════════════════════════════
+   KEY IDEAS — icon-style minimalist grid
+══════════════════════════════════════════ */
+.ki-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-top: 3rem;
+}
+.ki-card {
+  padding: 1.75rem 1.5rem;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+  transition: background 0.2s;
+  position: relative;
+}
+.ki-card:hover { background: var(--bg-warm); }
+/* remove right border on every 3rd card */
+.ki-card:nth-child(3n) { border-right: none; }
+/* remove bottom border on last row (cards 7-9) */
+.ki-card:nth-child(n+7) { border-bottom: none; }
+
+.ki-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.ki-icon {
+  width: 40px;
+  height: 40px;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+.ki-icon svg {
+  width: 100%;
+  height: 100%;
+}
+.ki-num {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ink-10);
+  line-height: 1;
+  margin-top: 2px;
+}
+.ki-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.25;
+  margin-bottom: 0.6rem;
+}
+.ki-body {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--ink-50);
+  line-height: 1.7;
+}
+
+@media (max-width: 960px) {
+  .ki-grid { grid-template-columns: repeat(2, 1fr); }
+  .ki-card:nth-child(3n) { border-right: 1px solid var(--border); }
+  .ki-card:nth-child(2n) { border-right: none; }
+  .ki-card:nth-child(n+7) { border-bottom: 1px solid var(--border); }
+  .ki-card:nth-child(n+9) { border-bottom: none; }
+}
+@media (max-width: 600px) {
+  .ki-grid { grid-template-columns: 1fr; }
+  .ki-card { border-right: none !important; }
+  .ki-card:last-child { border-bottom: none; }
+}
+
+
+/* ══════════════════════════════════════════
+   REVIEWS — minimalist list with circle avatars
+══════════════════════════════════════════ */
+.rv-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.rv-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.75rem 2rem;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+.rv-row:last-child { border-bottom: none; }
+.rv-row:hover { background: var(--bg-warm); }
+
+.rv-avatar-wrap {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1.5px solid var(--border);
+  position: relative;
+  background: var(--bg-grey);
+}
+.rv-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.rv-initials {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ink-50);
+  background: var(--bg-grey);
+}
+
+.rv-content {
+  flex: 1;
+  min-width: 0;
+}
+.rv-stars {
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  color: var(--ink-30);
+  margin-bottom: 0.5rem;
+}
+.rv-quote {
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  font-style: italic;
+  color: var(--ink-70);
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+}
+.rv-person {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.rv-name {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.rv-sep {
+  color: var(--ink-10);
+  font-size: 0.9rem;
+}
+.rv-role {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--ink-30);
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .rv-row { padding: 1.25rem; gap: 1rem; }
+  .rv-avatar-wrap { width: 44px; height: 44px; }
 }
